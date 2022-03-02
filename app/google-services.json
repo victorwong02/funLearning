@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "272889078600",
+    "project_id": "taruc-funlearning",
+    "storage_bucket": "taruc-funlearning.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272889078600:android:999ef57dbab778db1b497d",
+        "android_client_info": {
+          "package_name": "taruc.funlearning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272889078600-o0mpuctfu5sbena59s92n9fk4rc2d64m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyflpl3Xkujoeb1TlR2rgKmhfw_zh5u48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "272889078600-o0mpuctfu5sbena59s92n9fk4rc2d64m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
