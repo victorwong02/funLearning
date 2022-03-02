@@ -7,4 +7,20 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="red">#FFCC0000</color>
+    <color name="orange">#FFFF6600</color>
+    <color name="gold">#FFFFD700</color>
+    <color name="yellow">#FFFFFF00</color>
+    <color name="green">#FF00FF00</color>
+    <color name="light_green">#FF98FF98</color>
+    <color name="dark_green">#FF00CC00</color>
+    <color name="blue">#FF000099</color>
+    <color name="purple">#FFA02FEB</color>
+    <color name="light_purple">#FFE3C1F9</color>
+
+    <!-- Nav Bar Color Settings -->
+    <color name="nav_bar_bg_color">@color/green</color>
+    <color name="nav_bar_ic_tint">@color/white</color>
+    <color name="nav_bar_text_color">@color/white</color>
 </resources>
