@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Login"
+        android:text="@string/login"
         style="@style/TextAppearance.MaterialComponents.Headline4"/>
 
     <TextView
@@ -34,7 +34,7 @@
         android:layout_centerInParent="true">
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/emailEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
@@ -51,7 +51,7 @@
         android:layout_centerInParent="true">
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/passwordEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
