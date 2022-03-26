@@ -16,12 +16,12 @@
         style="@style/TextAppearance.MaterialComponents.Headline4"/>
 
     <TextView
+        style="@style/TextAppearance.MaterialComponents.Caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/login_to_your_account"
         android:layout_below="@id/titleLabel"
-        style="@style/TextAppearance.MaterialComponents.Caption"/>
+        android:layout_centerHorizontal="true"
+        android:text="@string/login_to_your_account" />
 
 
     <!--Email-->

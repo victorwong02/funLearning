@@ -24,4 +24,6 @@
     <color name="nav_bar_bg_color">@color/green</color>
     <color name="nav_bar_ic_tint">@color/white</color>
     <color name="nav_bar_text_color">@color/white</color>
+
+    <color name="list_color_green">#C6DABF</color>
 </resources>
