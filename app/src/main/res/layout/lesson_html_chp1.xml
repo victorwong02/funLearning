@@ -7,7 +7,6 @@
     tools:context=".lesson_html_chp1">
 
     <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
@@ -66,8 +65,8 @@
 
             <ImageView
                 android:id="@+id/HTML_heading_sample_pic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="325dp"
+                android:layout_height="175dp"
                 android:layout_marginTop="88dp"
                 app:layout_constraintStart_toStartOf="@+id/HTML_heading_des"
                 app:layout_constraintTop_toTopOf="@+id/HTML_heading_des"
@@ -91,20 +90,37 @@
                 app:layout_constraintStart_toStartOf="@+id/HTML_paragraph_title"
                 app:layout_constraintTop_toBottomOf="@+id/HTML_paragraph_title" />
 
+            <ImageView
+                android:id="@+id/HTML_paragraph_sample_pic"
+                android:layout_width="334dp"
+                android:layout_height="123dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="@+id/HTML_paragraph_des"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_paragraph_des"
+                app:srcCompat="@drawable/html_paragraph_sample" />
 
+            <TextView
+                android:id="@+id/HTML_link_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="@string/htmlLinkTitle"
+                app:layout_constraintStart_toStartOf="@+id/HTML_paragraph_sample_pic"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_paragraph_sample_pic" />
 
-
-
+            <TextView
+                android:id="@+id/abs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="@string/htmlLinkTitle"
+                app:layout_constraintStart_toStartOf="@+id/HTML_paragraph_sample_pic"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_paragraph_sample_pic" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-
-
-
     </ScrollView>
-
 
 
 </FrameLayout>

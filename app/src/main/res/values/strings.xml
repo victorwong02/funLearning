@@ -24,6 +24,8 @@
                 <string name="htmlHeadingDes">HTML headings are defined with the h1 to h6 tags.\n\nh1 defines the most important heading.\nh6 defines the least important heading.</string>
                 <string name="htmlParagraphTitle">HTML Paragraph</string>
                 <string name="htmlParagraphDes">HTML paragraphs are defined with the p tag:</string>
+                <string name="htmlLinkTitle">HTML Links</string>
+                <string name="htmlLinkDes">HTML links are defined with the a tag:</string>
 
 
 
