@@ -15,9 +15,9 @@
     <string name="create_your_account">Create Your Account</string>
 
     <!--Si Hua's string-->
-        <!--HTML string-->
-            <!--Chapter 1-->
-                <string name="htmlChap1Title">Chapter 1 : Introduction to HTML</string>
-                <string name="htmlSample">sample</string>
+    <!--HTML string-->
+    <!--Chapter 1-->
+    <string name="htmlChap1Title">Chapter 1 : Introduction to HTML</string>
+    <string name="htmlSample">sample</string>
 
 </resources>
