@@ -18,6 +18,15 @@
         <!--HTML string-->
             <!--Chapter 1-->
                 <string name="htmlChap1Title">Chapter 1 : Introduction to HTML</string>
-                <string name="htmlSample">sample</string>
+                <string name="htmlDocSample">HTML Document Sample</string>
+                <string name="htmlDocSamplePic">Picture for HTML Document Sample</string>
+                <string name="htmlHeadingTitle">HTML Headings</string>
+                <string name="htmlHeadingDes">HTML headings are defined with the h1 to h6 tags.\n\nh1 defines the most important heading.\nh6 defines the least important heading.</string>
+                <string name="htmlParagraphTitle">HTML Paragraph</string>
+                <string name="htmlParagraphDes">HTML paragraphs are defined with the p tag:</string>
+
+
+
+
 
 </resources>
