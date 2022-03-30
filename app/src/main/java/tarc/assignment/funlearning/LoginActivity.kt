@@ -16,9 +16,6 @@ class LoginActivity : AppCompatActivity() {
     //view binding
     private  lateinit var binding:ActivityLoginBinding
 
-    //Action Bar
-    private lateinit var  actionBar: ActionBar
-
     //ProgressDialogue
     private lateinit var progressDialog:ProgressDialog
 
@@ -31,16 +28,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        //configure action bar
-        actionBar = supportActionBar!!
-        actionBar.title ="Login"
-
-        //configure progress dialog
-        progressDialog = ProgressDialog(this)
-        progressDialog.setTitle("Please wait")
-        progressDialog.setMessage("Logging In..")
-        progressDialog.setCanceledOnTouchOutside(false)
 
         //init firebaseAuth
         firebaseAuth = FirebaseAuth.getInstance()
@@ -55,6 +42,12 @@ class LoginActivity : AppCompatActivity() {
         binding.loginBtn.setOnClickListener {
             //validation check
             validateData()
+        }
+
+        //click, forget password
+        binding.forgetPassword.setOnClickListener {
+            //
+            startActivity(Intent(this, ForgetPasswordActivity::class.java))
         }
     }
 

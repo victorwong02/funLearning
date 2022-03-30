@@ -16,8 +16,6 @@ class RegisterActivity : AppCompatActivity() {
     //view binding
     private  lateinit var binding: ActivityRegisterBinding
 
-    //Action Bar
-    private lateinit var  actionBar: ActionBar
 
     //ProgressDialogue
     private lateinit var progressDialog: ProgressDialog
@@ -32,17 +30,6 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //configure action bar
-        actionBar = supportActionBar!!
-        actionBar.title = "Register"
-        actionBar.setDisplayHomeAsUpEnabled(true)
-        actionBar.setDisplayShowHomeEnabled(true)
-
-        //configure progress dialog
-        progressDialog = ProgressDialog(this)
-        progressDialog.setTitle("Please wait")
-        progressDialog.setMessage("Creating Account..")
-        progressDialog.setCanceledOnTouchOutside(false)
 
         //init firebase auth
         firebaseAuth = FirebaseAuth.getInstance()
@@ -69,16 +56,16 @@ class RegisterActivity : AppCompatActivity() {
         }
         else if (password.length <6){
             //too short
-            binding.passwordEt.error = "Passowrd must at least 6 characters"
+            binding.passwordEt.error = "Password must at least 6 characters"
         }
-        else
+        else{
             //valid data, create account
-                firebaseSignUp()
-
+            firebaseSignUp()
+        }
     }
 
     private fun firebaseSignUp() {
-        progressDialog.show()
+        //progressDialog.show()
 
         //create account
         firebaseAuth.createUserWithEmailAndPassword(email, password)
@@ -98,10 +85,10 @@ class RegisterActivity : AppCompatActivity() {
             }
     }
 
-    override fun onSupportNavigateUp(): Boolean {
+/*    override fun onSupportNavigateUp(): Boolean {
         onBackPressed() // go back previous activity
         return super.onSupportNavigateUp()
-    }
+    }*/
 }
 
 

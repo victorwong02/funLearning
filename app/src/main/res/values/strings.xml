@@ -15,24 +15,23 @@
     <string name="create_your_account">Create Your Account</string>
 
     <!--Si Hua's string-->
-        <!--HTML string-->
-            <!--Chapter 1-->
-                <string name="htmlChap1Title">Chapter 1 : Introduction to HTML</string>
-                <string name="htmlDocSample">HTML Document Sample</string>
-                <string name="htmlDocSamplePic">Picture for HTML Document Sample</string>
-                <string name="htmlHeadingTitle">HTML Headings</string>
-                <string name="htmlHeadingDes">HTML headings are defined with the h1 to h6 tags.\n\nh1 defines the most important heading.\nh6 defines the least important heading.</string>
-                <string name="htmlHeadingSamplePic">Picture for HTML Heading Sample</string>
-                <string name="htmlParagraphTitle">HTML Paragraph</string>
-                <string name="htmlParagraphDes">HTML paragraphs are defined with the p tag:</string>
-                <string name="htmlParagraphSamplePic">Picture for HTML Paragraph Sample</string>
-                <string name="htmlLinkTitle">HTML Links</string>
-                <string name="htmlLinkDes">HTML links are defined with the a tag:</string>
-                <string name="htmlLinkSamplePic">Picture for HTML Link Sample</string>
-                <string name="htmlImageTitle">HTML Images</string>
-                <string name="htmlImageDes">HTML images are defined with the img tag.\n\nThe source file (src), alternative text (alt), width, and height are provided as attributes:</string>
-                <string name="htmlImageSamplePic">Picture for HTML Image Sample</string>
-
+    <!--HTML string-->
+    <!--Chapter 1-->
+    <string name="htmlChap1Title">Chapter 1 : Introduction to HTML</string>
+    <string name="htmlDocSample">HTML Document Sample</string>
+    <string name="htmlDocSamplePic">Picture for HTML Document Sample</string>
+    <string name="htmlHeadingTitle">HTML Headings</string>
+    <string name="htmlHeadingDes">HTML headings are defined with the h1 to h6 tags.\n\nh1 defines the most important heading.\nh6 defines the least important heading.</string>
+    <string name="htmlHeadingSamplePic">Picture for HTML Heading Sample</string>
+    <string name="htmlParagraphTitle">HTML Paragraph</string>
+    <string name="htmlParagraphDes">HTML paragraphs are defined with the p tag:</string>
+    <string name="htmlParagraphSamplePic">Picture for HTML Paragraph Sample</string>
+    <string name="htmlLinkTitle">HTML Links</string>
+    <string name="htmlLinkDes">HTML links are defined with the a tag:</string>
+    <string name="htmlLinkSamplePic">Picture for HTML Link Sample</string>
+    <string name="htmlImageTitle">HTML Images</string>
+    <string name="htmlImageDes">HTML images are defined with the img tag.\n\nThe source file (src), alternative text (alt), width, and height are provided as attributes:</string>
+    <string name="htmlImageSamplePic">Picture for HTML Image Sample</string>
 
 
 </resources>

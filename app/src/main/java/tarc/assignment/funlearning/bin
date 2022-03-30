@@ -1,0 +1,32 @@
+LoginActivity
+
+//Action Bar
+    private lateinit var  actionBar: ActionBar
+
+ //configure action bar
+            actionBar = supportActionBar!!
+            actionBar.title ="Login"
+
+            //configure progress dialog
+            progressDialog = ProgressDialog(this)
+            progressDialog.setTitle("Please wait")
+            progressDialog.setMessage("Logging In..")
+            progressDialog.setCanceledOnTouchOutside(false)
+
+RegisterActivity
+
+
+    //Action Bar
+    private lateinit var  actionBar: ActionBar
+
+  //configure action bar
+        actionBar = supportActionBar!!
+        actionBar.title = "Register"
+        actionBar.setDisplayHomeAsUpEnabled(true)
+        actionBar.setDisplayShowHomeEnabled(true)
+
+      //configure progress dialog
+        progressDialog = ProgressDialog(this)
+        progressDialog.setTitle("Please wait")
+        progressDialog.setMessage("Creating Account..")
+        progressDialog.setCanceledOnTouchOutside(false)
