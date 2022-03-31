@@ -1,13 +1,11 @@
 package tarc.assignment.funlearning
 
-import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Patterns
 import android.widget.Toast
-import androidx.appcompat.app.ActionBar
 import com.google.firebase.auth.FirebaseAuth
 import tarc.assignment.funlearning.databinding.ActivityLoginBinding
 
@@ -15,9 +13,6 @@ class LoginActivity : AppCompatActivity() {
 
     //view binding
     private  lateinit var binding:ActivityLoginBinding
-
-    //ProgressDialogue
-    private lateinit var progressDialog:ProgressDialog
 
     //Firebase Auth
     private lateinit var firebaseAuth: FirebaseAuth
@@ -31,6 +26,7 @@ class LoginActivity : AppCompatActivity() {
 
         //init firebaseAuth
         firebaseAuth = FirebaseAuth.getInstance()
+        // if user is logged in, direct go home
         checkUser()
 
         //click, open register
@@ -70,12 +66,9 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun firebaseLogin() {
-        //show progress
-        progressDialog.show()
+
         firebaseAuth.signInWithEmailAndPassword(email, password)
             .addOnSuccessListener {
-                //success
-                progressDialog.dismiss()
                 //get user info
                 val firebaseUser =  firebaseAuth.currentUser
                 val email = firebaseUser!!.email
@@ -84,26 +77,20 @@ class LoginActivity : AppCompatActivity() {
                 //open home screen
                 startActivity(Intent(this,MainActivity::class.java))
                 TODO("Change this main activity to following activity")
-                finish()
             }
-            .addOnFailureListener { e->
-                //failed
-                progressDialog.dismiss()
-                Toast.makeText(this, "Login failed due to ${e.message}", Toast.LENGTH_SHORT).show()
+            .addOnFailureListener {
+                Toast.makeText(this,"Invalid Email or Password", Toast.LENGTH_SHORT).show()
             }
+
     }
 
 
     private fun checkUser() {
         // if user is logged in, go to main screen
         //get current user
-        val firebaseUser = firebaseAuth.currentUser
-        if (firebaseUser != null)
-        {
+        if (firebaseAuth.currentUser != null) {
             //logged in
             startActivity(Intent(this,MainActivity::class.java))
-            TODO("Change this main activity to following activity")
-            finish()
         }
     }
 }

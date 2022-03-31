@@ -7,7 +7,6 @@ import android.util.Patterns
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import tarc.assignment.funlearning.databinding.ActivityForgetPasswordBinding
-import tarc.assignment.funlearning.databinding.ActivityLoginBinding
 
 class ForgetPasswordActivity : AppCompatActivity() {
 
@@ -35,10 +34,12 @@ class ForgetPasswordActivity : AppCompatActivity() {
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             //invalid email format
             binding.emailEt.error = "Invalid email format"
+
         } else {
             //valid data, create account
             firebaseAuth.sendPasswordResetEmail(email)
             Toast.makeText(this,"Please Check Your Email",Toast.LENGTH_LONG).show()
+            finish()
         }
     }
 }
