@@ -83,9 +83,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/passwordTil"
         android:layout_marginTop="41dp"
+        android:backgroundTint="@color/green"
         android:text="@string/login"
-        android:textColor="@color/light_yellow"
-        android:backgroundTint="@color/green"/>
+        android:textColor="@color/light_yellow" />
 
     <!-- No account? go signup-->
     <TextView
