@@ -48,8 +48,20 @@
     <string name="takeExeButton2">Take Exercise</string>
     <string name="nextChapButton2">Chapter 3</string>
     <!--Chapter 1 Exercise-->
-    <string name="htmlChap1Exe">Exercise 1</string>
-    <string name=""></string>
+    <string name="htmlChap1Exe1">Exercise 1</string>
+    <string name="htmlChap1Exe1Q1">1. Which tag defines the most important heading?</string>
+    <string name="htmlChap1Exe1Q1Opt1">h1</string>
+    <string name="htmlChap1Exe1Q1Opt2">h6</string>
+    <string name="htmlChap1Exe1Q1Opt3">h9</string>
+    <string name="htmlChap1Exe1Q2">2. Heading Quantity</string>
+    <string name="htmlChap1Exe1Q2Input">EG: 1</string>
+    <string name="htmlChap1Exe1Q3">3. Choose tag that must contains in HTML Document.</string>
+    <string name="htmlChap1Exe1Q4">4. Choose correct link tag.</string>
+    <string name="htmlChap1Exe1Q5">5. Choose correct tag for source file.</string>
+    <string name="showResultButton">Show Result</string>
+
+
+
 
 
     <string name="forgot_password">Forgot Password</string>
