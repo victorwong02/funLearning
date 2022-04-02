@@ -32,6 +32,23 @@
     <string name="htmlImageTitle">HTML Images</string>
     <string name="htmlImageDes">HTML images are defined with the img tag.\n\nThe source file (src), alternative text (alt), width, and height are provided as attributes:</string>
     <string name="htmlImageSamplePic">Picture for HTML Image Sample</string>
+    <string name="takeExeButton">Take Exercise</string>
+    <string name="nextChapButton">Chapter 2</string>
+    <!--Chapter 2-->
+    <string name="htmlChap2Title">Chapter 2 : HTML Attributes</string>
+    <string name="htmlWidthHeightTitle">The width and height Attributes</string>
+    <string name="htmlWidthHeightDes">The img tag should also contain the width and height attributes, which specifies the width and height of the image (in pixels):</string>
+    <string name="htmlWeightHeightSamplePic">Picture for HTML Width Height Sample</string>
+    <string name="htmlAltTitle">The alt Attribute</string>
+    <string name="htmlAltDes">The required alt attribute for the img tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to slow connection, or an error in the src attribute, or if the user uses a screen reader. \n\nExample:</string>
+    <string name="htmlAltSamplePic">Picture for HTML Alt Sample</string>
+    <string name="htmlStyleTitle">The style Attribute</string>
+    <string name="htmlStyleDes">The style attribute is used to add styles to an element, such as color, font, size, and more. \n\nExample:</string>
+    <string name="htmlStyleSamplePic">Picture for HTML Style Sample</string>
+    <string name="takeExeButton2">Take Exercise</string>
+    <string name="nextChapButton2">Chapter 3</string>
+
+
     <string name="forgot_password">Forgot Password</string>
     <string name="submit">Submit</string>
     <string name="reset_password">Reset Password</string>

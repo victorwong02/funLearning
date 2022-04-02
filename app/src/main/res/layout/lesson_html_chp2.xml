@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".lesson_html_chp1">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/HTML_chap2_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="64dp"
+                android:text="@string/htmlChap2Title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/HTML_width_height_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/htmlWidthHeightTitle"
+                app:layout_constraintStart_toStartOf="@+id/HTML_chap2_title"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_chap2_title" />
+
+            <TextView
+                android:id="@+id/HTML_width_height_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/htmlWidthHeightDes"
+                app:layout_constraintStart_toStartOf="@+id/HTML_width_height_title"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_width_height_title" />
+
+            <ImageView
+                android:id="@+id/HTML_doc_sample_pic"
+                android:layout_width="365dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/htmlDocSamplePic"
+                app:layout_constraintStart_toStartOf="@+id/HTML_width_height_des"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_width_height_des"
+                app:srcCompat="@drawable/html_width_height_sample" />
+
+            <TextView
+                android:id="@+id/HTML_alt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/htmlAltTitle"
+                app:layout_constraintStart_toStartOf="@+id/HTML_doc_sample_pic"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_doc_sample_pic" />
+
+            <TextView
+                android:id="@+id/HTML_alt_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/htmlAltDes"
+                app:layout_constraintStart_toStartOf="@+id/HTML_alt_title"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_alt_title" />
+
+            <ImageView
+                android:id="@+id/HTML_alt_example_pic"
+                android:layout_width="355dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/htmlAltSamplePic"
+                app:layout_constraintStart_toStartOf="@+id/HTML_alt_des"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_alt_des"
+                app:srcCompat="@drawable/html_alt_sample" />
+
+            <TextView
+                android:id="@+id/HTML_style_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/htmlStyleTitle"
+                app:layout_constraintStart_toStartOf="@+id/HTML_alt_example_pic"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_alt_example_pic" />
+
+            <TextView
+                android:id="@+id/HTML_style_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/htmlStyleDes"
+                app:layout_constraintStart_toStartOf="@+id/HTML_style_title"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_style_title" />
+
+            <ImageView
+                android:id="@+id/HTML_style_sample_pic"
+                android:layout_width="360dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/htmlAltSamplePic"
+                app:layout_constraintStart_toStartOf="@+id/HTML_style_des"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_style_des"
+                app:srcCompat="@drawable/html_style_sample" />
+
+            <Button
+                android:id="@+id/take_exe_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/takeExeButton2"
+                app:layout_constraintStart_toStartOf="@+id/HTML_style_sample_pic"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_style_sample_pic" />
+
+            <Button
+                android:id="@+id/next_chap_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="204dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/nextChapButton2"
+                app:layout_constraintStart_toStartOf="@+id/HTML_style_sample_pic"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_style_sample_pic" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

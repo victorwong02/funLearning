@@ -19,7 +19,7 @@
                 android:id="@+id/HTML_chap1_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="64dp"
                 android:text="@string/htmlChap1Title"
                 app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,7 @@
                 android:id="@+id/HTML_doc_des"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/htmlDocSample"
                 app:layout_constraintStart_toStartOf="@+id/HTML_chap1_title"
@@ -157,13 +157,26 @@
                 app:layout_constraintTop_toBottomOf="@+id/HTML_image_des"
                 app:srcCompat="@drawable/html_images_sample" />
 
+            <Button
+                android:id="@+id/take_exe_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/takeExeButton"
+                app:layout_constraintStart_toStartOf="@+id/HTML_image_sample_pic"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_image_sample_pic" />
 
+            <Button
+                android:id="@+id/next_chap_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="204dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/nextChapButton"
+                app:layout_constraintStart_toStartOf="@+id/HTML_image_sample_pic"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_image_sample_pic" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </ScrollView>
-
-
 </FrameLayout>
