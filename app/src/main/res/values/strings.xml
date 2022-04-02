@@ -47,6 +47,9 @@
     <string name="htmlStyleSamplePic">Picture for HTML Style Sample</string>
     <string name="takeExeButton2">Take Exercise</string>
     <string name="nextChapButton2">Chapter 3</string>
+    <!--Chapter 1 Exercise-->
+    <string name="htmlChap1Exe">Exercise 1</string>
+    <string name=""></string>
 
 
     <string name="forgot_password">Forgot Password</string>
