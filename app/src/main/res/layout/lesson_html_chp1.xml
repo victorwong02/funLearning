@@ -163,6 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:text="@string/takeExeButton"
+                android:backgroundTint="#8BC34A"
                 app:layout_constraintStart_toStartOf="@+id/HTML_image_sample_pic"
                 app:layout_constraintTop_toBottomOf="@+id/HTML_image_sample_pic" />
 
@@ -173,6 +174,7 @@
                 android:layout_marginStart="204dp"
                 android:layout_marginTop="40dp"
                 android:text="@string/nextChapButton"
+                android:backgroundTint="#8BC34A"
                 app:layout_constraintStart_toStartOf="@+id/HTML_image_sample_pic"
                 app:layout_constraintTop_toBottomOf="@+id/HTML_image_sample_pic" />
 
