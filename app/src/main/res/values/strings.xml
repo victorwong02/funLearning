@@ -62,7 +62,7 @@
     <string name="htmlChap1ExeQ4">4. Choose correct link tag.</string>
     <string name="htmlChap1ExeQ5">5. Choose correct tag for source file.</string>
     <!--Chapter 2 Exercise-->
-    <string name="htmlChap2Exe">Exercise 2</string>
+    <string name="Chap2Exe">Exercise 2</string>
     <string name="htmlChap2ExeQ1">1. What is Alt for?</string>
     <string name="htmlChap2ExeQ1Opt1">Width for Image</string>
     <string name="htmlChap2ExeQ1Opt2">Alternate Text for Image</string>
@@ -82,6 +82,14 @@
     <!--Chapter 1-->
     <string name="CChap1Title">Chapter 1 : Introduction to C Language</string>
     <string name="CChap1WhatIsC">What is C?</string>
+    <string name="CChap1WhatIsCDes">C is a general-purpose programming language created by Dennis Ritchie at the Bell Laboratories in 1972.\n\nIt is a very popular language, despite being old.\n\nC is strongly associated with UNIX, as it was developed to write the UNIX operating system.</string>
+    <string name="CChap1WhyLearnC">Why Learn C?</string>
+    <string name="CChap1WhyLearnCDes">It is one of the most popular programming language in the world\n\nIf you know C, you will have no problem to learn other popular programming languages such as Java, Python, C++, C#, etc, as the syntax is similar\n\nC is very fast, compared to other programming languages, like Java and Python\n\nC is very versatile; it can be used in both applications and technologies</string>
+
+
+
+
+
 
 
 

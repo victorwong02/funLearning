@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Diploma Yr2Sem3/Mobile App/funLearning/app/src/main/res/drawable/home_icon.xml" value="0.1" />
         <entry key="..\:/Diploma Yr2Sem3/Mobile App/funLearning/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Diploma Yr2Sem3/Mobile App/funLearning/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Diploma Yr2Sem3/Mobile App/funLearning/app/src/main/res/layout/activity_register.xml" value="0.25" />
@@ -13,7 +14,7 @@
         <entry key="..\:/Diploma Yr2Sem3/Mobile App/funLearning/app/src/main/res/layout/exercise_html_chp1_showresult.xml" value="0.30597609561752986" />
         <entry key="..\:/Diploma Yr2Sem3/Mobile App/funLearning/app/src/main/res/layout/exercise_html_chp2.xml" value="0.25" />
         <entry key="..\:/Diploma Yr2Sem3/Mobile App/funLearning/app/src/main/res/layout/exercise_html_chp3.xml" value="0.2" />
-        <entry key="..\:/Diploma Yr2Sem3/Mobile App/funLearning/app/src/main/res/layout/fragment_profile.xml" value="0.5" />
+        <entry key="..\:/Diploma Yr2Sem3/Mobile App/funLearning/app/src/main/res/layout/fragment_profile.xml" value="0.16013071895424835" />
         <entry key="..\:/Diploma Yr2Sem3/Mobile App/funLearning/app/src/main/res/layout/home.xml" value="0.25" />
         <entry key="..\:/Diploma Yr2Sem3/Mobile App/funLearning/app/src/main/res/layout/lesson_c_lang_chp1.xml" value="0.33" />
         <entry key="..\:/Diploma Yr2Sem3/Mobile App/funLearning/app/src/main/res/layout/lesson_c_lang_chp2.xml" value="0.25" />

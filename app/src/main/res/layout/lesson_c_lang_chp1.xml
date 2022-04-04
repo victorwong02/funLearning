@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="64dp"
-                android:text="@string/CChap1WhatLearnC"
+                android:text="@string/CChap1WhyLearnC"
                 app:layout_constraintStart_toStartOf="@+id/C_Chap1_WhatIsC_Des"
                 app:layout_constraintTop_toBottomOf="@+id/C_Chap1_WhatIsC_Des" />
 
@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/CChap1WhatLearnCDes"
+                android:text="@string/CChap1WhyLearnCDes"
                 app:layout_constraintStart_toStartOf="@+id/C_Chap1_WhyLearnC"
                 app:layout_constraintTop_toBottomOf="@+id/C_Chap1_WhyLearnC" />
 
