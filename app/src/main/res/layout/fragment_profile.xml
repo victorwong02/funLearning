@@ -31,11 +31,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
-                android:layout_marginTop="100dp"
-                android:text="Name : %s"
+                android:layout_marginTop="32dp"
+                android:text="@string/user_name"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/profilepic"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/profilepic" />
 
             <TextView
                 android:id="@+id/user_email"
@@ -43,19 +43,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="30dp"
-                android:text="Email : %s"
+                android:text="@string/user_email"
                 app:layout_constraintStart_toEndOf="@+id/profilepic"
                 app:layout_constraintTop_toBottomOf="@+id/user_name" />
-
-            <TextView
-                android:id="@+id/user_age"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="30dp"
-                android:text="Age : -"
-                app:layout_constraintStart_toEndOf="@+id/profilepic"
-                app:layout_constraintTop_toBottomOf="@+id/user_email" />
 
             <Button
                 android:id="@+id/edit_profile"

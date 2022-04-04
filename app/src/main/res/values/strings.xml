@@ -61,12 +61,11 @@
     <string name="showResultButton">Show Result</string>
 
 
-
-
-
     <string name="forgot_password">Forgot Password</string>
     <string name="submit">Submit</string>
     <string name="reset_password">Reset Password</string>
+    <string name="user_name">Name : %s</string>
+    <string name="user_email">Email : %s</string>
 
 
 </resources>
