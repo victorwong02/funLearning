@@ -20,6 +20,7 @@ class EditProfile : Fragment() {
         binding.changePswd.setOnClickListener{
             startActivity(Intent(this, ForgetPasswordActivity::class.java))
         }
+
     }
 
     private fun editProfile() {
