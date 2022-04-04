@@ -1,59 +1,52 @@
 package tarc.assignment.funlearning
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.widget.Toast
+import tarc.assignment.funlearning.databinding.FragmentEditProfileBinding
+import tarc.assignment.funlearning.databinding.FragmentProfileBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [EditProfile.newInstance] factory method to
- * create an instance of this fragment.
- */
 class EditProfile : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    private lateinit var binding: FragmentEditProfileBinding
+    private lateinit var binding1: FragmentProfileBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+
+        binding.saveInfo.setOnClickListener{ editProfile() }
+
+        binding.changePswd.setOnClickListener{
+            startActivity(Intent(this, ForgetPasswordActivity::class.java))
         }
+
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_edit_profile, container, false)
-    }
+    private fun editProfile() {
+        val newName = binding.editName.text.toString()
+        val newEmail = binding.editEmail.text.toString()
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment EditProfile.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            EditProfile().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+        if (newName.trim() == null) {
+            if(newEmail.trim() == null) {
+                Toast.makeText(this, "Nothing Has Been Updated", Toast.LENGTH_SHORT).show()
             }
+            else {
+                binding1.userEmail.text = getString(R.string.user_email,newEmail)
+                Toast.makeText(this, "Profile Updated", Toast.LENGTH_SHORT).show()
+            }
+        }
+        else{
+            if(newEmail.trim() == null) {
+                binding1.userName.text = getString(R.string.user_name,newName)
+                Toast.makeText(this, "Profile Updated", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                binding1.userEmail.text = getString(R.string.user_email,newEmail)
+                binding1.userName.text = getString(R.string.user_name,newName)
+                Toast.makeText(this, "Profile Updated", Toast.LENGTH_SHORT).show()
+            }
+        }
+
     }
 }
