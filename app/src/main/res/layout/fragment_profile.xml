@@ -37,6 +37,7 @@
                 app:layout_constraintStart_toEndOf="@+id/profilepic"
                 app:layout_constraintTop_toTopOf="@+id/profilepic" />
 
+
             <TextView
                 android:id="@+id/user_email"
                 android:layout_width="wrap_content"
