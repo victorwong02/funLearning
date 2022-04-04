@@ -9,7 +9,7 @@
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -17,24 +17,64 @@
             android:padding="15dp">
 
             <TextView
-                android:id="@+id/HTML_chap1_exe"
+                android:id="@+id/HTML_Chap1_Exe_ShowResult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="64dp"
                 android:text="@string/Chap1Exe"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/htmlDocSamplePic"
+                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult"
+                app:srcCompat="@drawable/html_document_sample_"/>
+
+            <TextView
+                android:id="@+id/correct_ques_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/numCorrectQues"
+                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage" />
+
+            <TextView
+                android:id="@+id/num_correct_ques"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="184dp"
+                android:layout_marginTop="20dp"
+                android:text="test"
+                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage" />
+
+            <TextView
+                android:id="@+id/HTML_chap1_ans_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="350dp"
+                android:text="@string/ansTitle"
+                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult"/>
 
             <TextView
                 android:id="@+id/HTML_Chap1_Exe_Q1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/htmlChap1ExeQ1"
-                app:layout_constraintStart_toStartOf="@+id/HTML_chap1_exe"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_chap1_exe" />
+                app:layout_constraintStart_toStartOf="@+id/HTML_chap1_ans_title"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_chap1_ans_title" />
 
             <RadioGroup
                 android:id="@+id/HTML_Chap1_Exe_Q1_Opt"
@@ -44,6 +84,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q1">
 
                 <RadioButton
+                    android:checked="true"
                     android:id="@+id/HTML_Chap1_Exe_Q1_Opt1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -75,7 +116,7 @@
                 android:id="@+id/HTML_Chap1_Exe_Q2_Input"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="@string/htmlChap1ExeQ2Input"
+                android:hint="6"
                 app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q2"
                 app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q2" />
 
@@ -101,6 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="!DOCTYPE html tag"
+                android:checked="true"
                 app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q3_Choose1"
                 app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q3_Choose1" />
 
@@ -109,6 +151,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="body tag"
+                android:checked="true"
                 app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q3_Choose2"
                 app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q3_Choose2" />
 
@@ -146,7 +189,8 @@
                     android:id="@+id/HTML_Chap1_Exe_Q4_Opt2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="a href tag" />
+                    android:text="a href tag"
+                    android:checked="true"/>
 
                 <RadioButton
                     android:id="@+id/HTML_Chap1_Exe_Q4_Opt3"
@@ -175,7 +219,8 @@
                     android:id="@+id/HTML_Chap1_Exe_Q5_Opt1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="img src tag" />
+                    android:text="img src tag"
+                    android:checked="true"/>
 
                 <RadioButton
                     android:id="@+id/HTML_Chap1_Exe_Q5_Opt2"
@@ -189,17 +234,6 @@
                     android:layout_height="wrap_content"
                     android:text="head tag" />
             </RadioGroup>
-
-            <Button
-                android:id="@+id/HTML_Chap1_Exe_ShowResult"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="216dp"
-                android:layout_marginTop="36dp"
-                android:backgroundTint="#8BC34A"
-                android:text="@string/showResultButton"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q5_Opt"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q5_Opt" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

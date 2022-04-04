@@ -7,10 +7,6 @@
     android:backgroundTint="#8BC34A"
     tools:context=".lesson_html_chp1">
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,169 +18,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="64dp"
-                android:text="@string/htmlChap1Exe"
+                android:text="@string/Chap2Exe"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/HTML_Chap2_Exe_Q1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/htmlChap1ExeQ1"
-                app:layout_constraintStart_toStartOf="@+id/HTML_chap2_exe"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_chap2_exe" />
-
-            <RadioGroup
-                android:id="@+id/HTML_Chap2_Exe_Q1_Opt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap2_Exe_Q1"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap2_Exe_Q1">
-
-                <RadioButton
-                    android:id="@+id/HTML_Chap2_Exe_Q1_Opt1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/htmlChap2ExeQ1Opt1"/>
-
-                <RadioButton
-                    android:id="@+id/HTML_Chap2_Exe_Q1_Opt2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/htmlChap2ExeQ1Opt2"/>
-
-                <RadioButton
-                    android:id="@+id/HTML_Chap2_Exe_Q1_Opt3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/htmlChap2ExeQ1Opt3"/>
-
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/HTML_Chap2_Exe_Q2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/htmlChap2ExeQ1"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap2_Exe_Q1_Opt"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap2_Exe_Q1_Opt" />
-
-            <RadioGroup
-                android:id="@+id/HTML_Chap2_Exe_Q2_Opt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap2_Exe_Q2"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap2_Exe_Q2">
-
-                <RadioButton
-                    android:id="@+id/HTML_Chap2_Exe_Q2_Opt1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/htmlChap2ExeQ2Opt1"/>
-
-                <RadioButton
-                    android:id="@+id/HTML_Chap2_Exe_Q2_Opt2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/htmlChap2ExeQ2Opt2"/>
-
-                <RadioButton
-                    android:id="@+id/HTML_Chap2_Exe_Q2_Opt3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/htmlChap2ExeQ2Opt3"/>
-
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/HTML_Chap2_Exe_Q3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/htmlChap2ExeQ3"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap2_Exe_Q2_Opt"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap2_Exe_Q2_Opt" />
-
-            <CheckBox
-                android:id="@+id/HTML_Chap2_Exe_Q3_Checkbox1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/htmlChap2ExeQ3Checkbox1"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap2_Exe_Q3"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap2_Exe_Q3"/>
-
-            <CheckBox
-                android:id="@+id/HTML_Chap2_Exe_Q3_Checkbox2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/htmlChap2ExeQ3Checkbox2"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap2_Exe_Q3_Checkbox1"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap2_Exe_Q3_Checkbox1"/>
-
-            <CheckBox
-                android:id="@+id/HTML_Chap2_Exe_Q3_Checkbox3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/htmlChap2ExeQ3Checkbox3"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap2_Exe_Q3_Checkbox2"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap2_Exe_Q3_Checkbox2"/>
-
-            <CheckBox
-                android:id="@+id/HTML_Chap2_Exe_Q3_Checkbox4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/htmlChap2ExeQ3Checkbox4"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap2_Exe_Q3_Checkbox3"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap2_Exe_Q3_Checkbox3"/>
-
-            <TextView
-                android:id="@+id/HTML_Chap2_Exe_Q4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="40dp"
-                android:text="4. Does <p></p> for image tag?"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap2_Exe_Q3_Checkbox4"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap2_Exe_Q3_Checkbox4" />
-
-            <RadioGroup
-                android:id="@+id/HTML_Chap2_Exe_Q4_Opt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap2_Exe_Q4"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap2_Exe_Q4">
-
-                <RadioButton
-                    android:id="@+id/HTML_Chap2_Exe_Q4_Opt1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/htmlChap2ExeQ4Opt1"/>
-
-                <RadioButton
-                    android:id="@+id/HTML_Chap2_Exe_Q4_Opt2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/htmlChap2ExeQ4Opt2"/>
-
-            </RadioGroup>
-
-            <Button
-                android:id="@+id/HTML_Chap1_Exe_ShowResult"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="192dp"
-                android:layout_marginTop="4dp"
-                android:backgroundTint="#8BC34A"
-                android:text="@string/showResultButton"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap2_Exe_Q4_Opt"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap2_Exe_Q4_Opt" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+
+    <TextView
+        android:id="@+id/HTML_Chp1_ComingSoon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/comingSoonText"
+        app:layout_constraintStart_toStartOf="@+id/C_Chap2_Title"
+        app:layout_constraintTop_toBottomOf="@+id/C_Chap2_Title"/>
+
 </FrameLayout>

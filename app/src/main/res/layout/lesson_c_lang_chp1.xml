@@ -27,7 +27,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/C_Chap1_Syntax"
+                android:id="@+id/C_Chap1_WhatIsC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -36,7 +36,54 @@
                 app:layout_constraintStart_toStartOf="@+id/C_Chap1_Title"
                 app:layout_constraintTop_toBottomOf="@+id/C_Chap1_Title" />
 
+            <TextView
+                android:id="@+id/C_Chap1_WhatIsC_Des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/CChap1WhatIsCDes"
+                app:layout_constraintStart_toStartOf="@+id/C_Chap1_WhatIsC"
+                app:layout_constraintTop_toBottomOf="@+id/C_Chap1_WhatIsC" />
 
+            <TextView
+                android:id="@+id/C_Chap1_WhyLearnC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="64dp"
+                android:text="@string/CChap1WhatLearnC"
+                app:layout_constraintStart_toStartOf="@+id/C_Chap1_WhatIsC_Des"
+                app:layout_constraintTop_toBottomOf="@+id/C_Chap1_WhatIsC_Des" />
+
+            <TextView
+                android:id="@+id/C_Chap1_WhyLearnC_Des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/CChap1WhatLearnCDes"
+                app:layout_constraintStart_toStartOf="@+id/C_Chap1_WhyLearnC"
+                app:layout_constraintTop_toBottomOf="@+id/C_Chap1_WhyLearnC" />
+
+            <Button
+                android:id="@+id/take_exe_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/takeExeButton"
+                android:backgroundTint="#8BC34A"
+                app:layout_constraintStart_toStartOf="@+id/C_Chap1_WhyLearnC_Des"
+                app:layout_constraintTop_toBottomOf="@+id/C_Chap1_WhyLearnC_Des" />
+
+            <Button
+                android:id="@+id/next_chap_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="204dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/nextChapButton"
+                android:backgroundTint="#8BC34A"
+                app:layout_constraintStart_toStartOf="@+id/C_Chap1_WhyLearnC_Des"
+                app:layout_constraintTop_toBottomOf="@+id/C_Chap1_WhyLearnC_Des" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
