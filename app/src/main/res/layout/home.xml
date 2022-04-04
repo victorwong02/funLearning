@@ -6,8 +6,9 @@
     tools:context=".HomeActivity"
     android:background="@color/light_yellow">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/chapters"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <ListView
+        android:id="@+id/type_of_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>
