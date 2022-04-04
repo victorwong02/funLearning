@@ -16,6 +16,8 @@
 
     <!--Si Hua's string-->
     <!--HTML string-->
+    <string name="takeExeButton">Take Exercise</string>
+    <string name="showResultButton">Show Result</string>
     <!--Chapter 1-->
     <string name="htmlChap1Title">Chapter 1 : Introduction to HTML</string>
     <string name="htmlDocSample">HTML Document Sample</string>
@@ -32,7 +34,6 @@
     <string name="htmlImageTitle">HTML Images</string>
     <string name="htmlImageDes">HTML images are defined with the img tag.\n\nThe source file (src), alternative text (alt), width, and height are provided as attributes:</string>
     <string name="htmlImageSamplePic">Picture for HTML Image Sample</string>
-    <string name="takeExeButton">Take Exercise</string>
     <string name="nextChapButton">Chapter 2</string>
     <!--Chapter 2-->
     <string name="htmlChap2Title">Chapter 2 : HTML Attributes</string>
@@ -45,21 +46,39 @@
     <string name="htmlStyleTitle">The style Attribute</string>
     <string name="htmlStyleDes">The style attribute is used to add styles to an element, such as color, font, size, and more. \n\nExample:</string>
     <string name="htmlStyleSamplePic">Picture for HTML Style Sample</string>
-    <string name="takeExeButton2">Take Exercise</string>
     <string name="nextChapButton2">Chapter 3</string>
     <!--Chapter 1 Exercise-->
-    <string name="htmlChap1Exe1">Exercise 1</string>
-    <string name="htmlChap1Exe1Q1">1. Which tag defines the most important heading?</string>
-    <string name="htmlChap1Exe1Q1Opt1">h1</string>
-    <string name="htmlChap1Exe1Q1Opt2">h6</string>
-    <string name="htmlChap1Exe1Q1Opt3">h9</string>
-    <string name="htmlChap1Exe1Q2">2. Heading Quantity</string>
-    <string name="htmlChap1Exe1Q2Input">EG: 1</string>
-    <string name="htmlChap1Exe1Q3">3. Choose tag that must contains in HTML Document.</string>
-    <string name="htmlChap1Exe1Q4">4. Choose correct link tag.</string>
-    <string name="htmlChap1Exe1Q5">5. Choose correct tag for source file.</string>
-    <string name="showResultButton">Show Result</string>
-
+    <string name="htmlChap1Exe">Exercise 1</string>
+    <string name="htmlChap1ExeQ1">1. Which tag defines the most important heading?</string>
+    <string name="htmlChap1ExeQ1Opt1">h1</string>
+    <string name="htmlChap1ExeQ1Opt2">h6</string>
+    <string name="htmlChap1ExeQ1Opt3">h9</string>
+    <string name="htmlChap1ExeQ2">2. Heading Quantity</string>
+    <string name="htmlChap1ExeQ2Input">EG: 1</string>
+    <string name="htmlChap1ExeQ3">3. Choose tag that must contains in HTML Document.</string>
+    <string name="htmlChap1ExeQ4">4. Choose correct link tag.</string>
+    <string name="htmlChap1ExeQ5">5. Choose correct tag for source file.</string>
+    <!--Chapter 2 Exercise-->
+    <string name="htmlChap2Exe">Exercise 2</string>
+    <string name="htmlChap2ExeQ1">1. What is Alt for?</string>
+    <string name="htmlChap2ExeQ1Opt1">Width for Image</string>
+    <string name="htmlChap2ExeQ1Opt2">Alternate Text for Image</string>
+    <string name="htmlChap2ExeQ1Opt3">Styles for Element</string>
+    <string name="htmlChap2ExeQ2">2. What is Style for?</string>
+    <string name="htmlChap2ExeQ2Opt1">Width for Image</string>
+    <string name="htmlChap2ExeQ2Opt2">Alternate Text for Image</string>
+    <string name="htmlChap2ExeQ2Opt3">Add Styles to Element</string>
+    <string name="htmlChap2ExeQ3">3. Choose the correct style format.</string>
+    <string name="htmlChap2ExeQ3Checkbox1">style=“color=red”</string>
+    <string name="htmlChap2ExeQ3Checkbox2">style=“color:red;”</string>
+    <string name="htmlChap2ExeQ3Checkbox3">style=“color:red”</string>
+    <string name="htmlChap2ExeQ3Checkbox4">style=“backgroundcolor:blue;”</string>
+    <string name="htmlChap2ExeQ4Opt1">True</string>
+    <string name="htmlChap2ExeQ4Opt2">False</string>
+    <!--C Language-->
+    <!--Chapter 1-->
+    <string name="CChap1Title">Chapter 1 : Introduction to C Language</string>
+    <string name="CChap1WhatIsC">What is C?</string>
 
     <string name="forgot_password">Forgot Password</string>
     <string name="submit">Submit</string>
