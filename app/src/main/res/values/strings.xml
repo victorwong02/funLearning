@@ -51,7 +51,7 @@
     <string name="htmlStyleSamplePic">Picture for HTML Style Sample</string>
     <string name="nextChapButton2">Chapter 3</string>
     <!--Chapter 1 Exercise-->
-    <string name="htmlChap1Exe">Exercise 1</string>
+    <string name="Chap1Exe">Exercise 1</string>
     <string name="htmlChap1ExeQ1">1. Which tag defines the most important heading?</string>
     <string name="htmlChap1ExeQ1Opt1">h1</string>
     <string name="htmlChap1ExeQ1Opt2">h6</string>
