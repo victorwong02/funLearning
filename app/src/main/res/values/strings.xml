@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">funLearning</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
@@ -18,7 +18,7 @@
     <!--HTML string-->
     <string name="takeExeButton">Take Exercise</string>
     <string name="showResultButton">Show Result</string>
-    <string name="comingSoonText">Coming Soon...</string>
+    <string name="comingSoonText">Coming Soon…</string>
     <string name="numCorrectQues">Number of Correct Question:</string>
     <string name="ansTitle">Answer:</string>
     <string name="nextChapButton">Next Chapter</string>
@@ -93,8 +93,8 @@
     <!--Profile-->
     <string name="user_name">Name : %s</string>
     <string name="user_email">Email : %s</string>
-    <string name="changeprofile_button_text">Change Profile Details</string>
-    <string name="logout_buttontext">Logout</string>
+    <string name="change_profile_button_text">Change Profile Details</string>
+    <string name="logout_button_text">Logout</string>
     <string name="history_title">History</string>
     <string name="html_language_progress">HTML Language Progress</string>
     <string name="c_language_progress">C Language Progress</string>
@@ -102,7 +102,7 @@
     <!--Edit Profile-->
     <string name="enter_new_name">Enter New Name</string>
     <string name="enter_new_email">Enter New Email</string>
-    <string name="save_buttontext">Save</string>
+    <string name="save_button_text">Save</string>
     <string name="change_password_button">Change Password</string>
 
 
