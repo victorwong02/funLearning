@@ -22,6 +22,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="64dp"
                 android:text="@string/htmlChap2Title"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,6 +33,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="40dp"
                 android:text="@string/htmlWidthHeightTitle"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/HTML_chap2_title"
                 app:layout_constraintTop_toBottomOf="@+id/HTML_chap2_title" />
 
@@ -61,6 +63,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="40dp"
                 android:text="@string/htmlAltTitle"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/HTML_doc_sample_pic"
                 app:layout_constraintTop_toBottomOf="@+id/HTML_doc_sample_pic" />
 
@@ -90,6 +93,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="40dp"
                 android:text="@string/htmlStyleTitle"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/HTML_alt_example_pic"
                 app:layout_constraintTop_toBottomOf="@+id/HTML_alt_example_pic" />
 
@@ -113,7 +117,7 @@
                 app:srcCompat="@drawable/html_style_sample" />
 
             <Button
-                android:id="@+id/take_exe_button2"
+                android:id="@+id/take_html_exe2_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -123,12 +127,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/HTML_style_sample_pic" />
 
             <Button
-                android:id="@+id/next_chap_button"
+                android:id="@+id/next_html_chap3_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="204dp"
                 android:layout_marginTop="40dp"
-                android:text="@string/nextChapButton2"
+                android:text="@string/nextChapButton"
                 android:backgroundTint="#8BC34A"
                 app:layout_constraintStart_toStartOf="@+id/HTML_style_sample_pic"
                 app:layout_constraintTop_toBottomOf="@+id/HTML_style_sample_pic" />

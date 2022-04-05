@@ -23,7 +23,8 @@
                 android:layout_marginTop="64dp"
                 android:text="@string/htmlChap1Title"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/HTML_doc_des"
@@ -33,7 +34,8 @@
                 android:layout_marginTop="20dp"
                 android:text="@string/htmlDocSample"
                 app:layout_constraintStart_toStartOf="@+id/HTML_chap1_title"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_chap1_title" />
+                app:layout_constraintTop_toBottomOf="@+id/HTML_chap1_title"
+                android:textStyle="bold"/>
 
             <ImageView
                 android:id="@+id/HTML_doc_sample_pic"
@@ -51,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
                 android:text="@string/htmlHeadingTitle"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/HTML_doc_sample_pic"
                 app:layout_constraintTop_toBottomOf="@+id/HTML_doc_sample_pic" />
 
@@ -79,6 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
                 android:text="@string/htmlParagraphTitle"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/HTML_heading_sample_pic"
                 app:layout_constraintTop_toBottomOf="@+id/HTML_heading_sample_pic" />
 
@@ -107,6 +111,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
                 android:text="@string/htmlLinkTitle"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/HTML_paragraph_sample_pic"
                 app:layout_constraintTop_toBottomOf="@+id/HTML_paragraph_sample_pic" />
 
@@ -135,6 +140,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
                 android:text="@string/htmlImageTitle"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/HTML_link_sample_pic"
                 app:layout_constraintTop_toBottomOf="@+id/HTML_link_sample_pic" />
 
@@ -158,7 +164,7 @@
                 app:srcCompat="@drawable/html_images_sample" />
 
             <Button
-                android:id="@+id/take_exe_button"
+                android:id="@+id/take_html_exe1_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -168,7 +174,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/HTML_image_sample_pic" />
 
             <Button
-                android:id="@+id/next_chap_button"
+                android:id="@+id/next_html_chap2_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="204dp"

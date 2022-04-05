@@ -20,7 +20,8 @@
                 android:layout_marginTop="64dp"
                 android:text="@string/Chap2Exe"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:textStyle="bold"/>
 
 
 

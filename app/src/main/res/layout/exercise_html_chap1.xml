@@ -24,7 +24,8 @@
                 android:layout_marginTop="64dp"
                 android:text="@string/Chap1Exe"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/HTML_Chap1_Exe_Q1"

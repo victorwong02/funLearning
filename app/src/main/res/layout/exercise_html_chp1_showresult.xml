@@ -24,7 +24,8 @@
                 android:layout_marginTop="64dp"
                 android:text="@string/Chap1Exe"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:textStyle="bold"/>
 
             <ImageView
                 android:id="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
@@ -44,7 +45,8 @@
                 android:layout_marginTop="20dp"
                 android:text="@string/numCorrectQues"
                 app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage" />
+                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/num_correct_ques"
@@ -64,7 +66,8 @@
                 android:layout_marginTop="350dp"
                 android:text="@string/ansTitle"
                 app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult"/>
+                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/HTML_Chap1_Exe_Q1"
@@ -234,6 +237,27 @@
                     android:layout_height="wrap_content"
                     android:text="head tag" />
             </RadioGroup>
+
+            <Button
+                android:id="@+id/next_exe2_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/nextExeButton"
+                android:backgroundTint="#8BC34A"
+                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q5_Opt"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q5_Opt" />
+
+            <Button
+                android:id="@+id/next_chap2_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="204dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/nextChapButton"
+                android:backgroundTint="#8BC34A"
+                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q5_Opt"
+                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q5_Opt" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

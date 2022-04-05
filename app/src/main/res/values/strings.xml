@@ -21,6 +21,8 @@
     <string name="comingSoonText">Coming Soon...</string>
     <string name="numCorrectQues">Number of Correct Question:</string>
     <string name="ansTitle">Answer:</string>
+    <string name="nextChapButton">Next Chapter</string>
+    <string name="nextExeButton">Next Exercise</string>
     <!--Chapter 1-->
     <string name="htmlChap1Title">Chapter 1 : Introduction to HTML</string>
     <string name="htmlDocSample">HTML Document Sample</string>
@@ -37,7 +39,6 @@
     <string name="htmlImageTitle">HTML Images</string>
     <string name="htmlImageDes">HTML images are defined with the img tag.\n\nThe source file (src), alternative text (alt), width, and height are provided as attributes:</string>
     <string name="htmlImageSamplePic">Picture for HTML Image Sample</string>
-    <string name="nextChapButton">Chapter 2</string>
     <!--Chapter 2-->
     <string name="htmlChap2Title">Chapter 2 : HTML Attributes</string>
     <string name="htmlWidthHeightTitle">The width and height Attributes</string>
@@ -49,7 +50,7 @@
     <string name="htmlStyleTitle">The style Attribute</string>
     <string name="htmlStyleDes">The style attribute is used to add styles to an element, such as color, font, size, and more. \n\nExample:</string>
     <string name="htmlStyleSamplePic">Picture for HTML Style Sample</string>
-    <string name="nextChapButton2">Chapter 3</string>
+    <string name="htmlChap3Title">Chapter 3</string>
     <!--Chapter 1 Exercise-->
     <string name="Chap1Exe">Exercise 1</string>
     <string name="htmlChap1ExeQ1">1. Which tag defines the most important heading?</string>
@@ -85,7 +86,8 @@
     <string name="CChap1WhatIsCDes">C is a general-purpose programming language created by Dennis Ritchie at the Bell Laboratories in 1972.\n\nIt is a very popular language, despite being old.\n\nC is strongly associated with UNIX, as it was developed to write the UNIX operating system.</string>
     <string name="CChap1WhyLearnC">Why Learn C?</string>
     <string name="CChap1WhyLearnCDes">It is one of the most popular programming language in the world\n\nIf you know C, you will have no problem to learn other popular programming languages such as Java, Python, C++, C#, etc, as the syntax is similar\n\nC is very fast, compared to other programming languages, like Java and Python\n\nC is very versatile; it can be used in both applications and technologies</string>
-
+    <!--Chapter 2-->
+    <string name="CChap2Title">Chapter 2</string>
 
     <!--Hui Yi's string-->
     <!--Profile-->

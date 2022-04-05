@@ -24,7 +24,8 @@
                 android:layout_marginTop="64dp"
                 android:text="@string/CChap1Title"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/C_Chap1_WhatIsC"
@@ -34,7 +35,8 @@
                 android:layout_marginTop="40dp"
                 android:text="@string/CChap1WhatIsC"
                 app:layout_constraintStart_toStartOf="@+id/C_Chap1_Title"
-                app:layout_constraintTop_toBottomOf="@+id/C_Chap1_Title" />
+                app:layout_constraintTop_toBottomOf="@+id/C_Chap1_Title"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/C_Chap1_WhatIsC_Des"
@@ -53,7 +55,8 @@
                 android:layout_marginTop="64dp"
                 android:text="@string/CChap1WhyLearnC"
                 app:layout_constraintStart_toStartOf="@+id/C_Chap1_WhatIsC_Des"
-                app:layout_constraintTop_toBottomOf="@+id/C_Chap1_WhatIsC_Des" />
+                app:layout_constraintTop_toBottomOf="@+id/C_Chap1_WhatIsC_Des"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/C_Chap1_WhyLearnC_Des"
@@ -65,7 +68,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/C_Chap1_WhyLearnC" />
 
             <Button
-                android:id="@+id/take_exe_button"
+                android:id="@+id/take_c_exe1_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -75,7 +78,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/C_Chap1_WhyLearnC_Des" />
 
             <Button
-                android:id="@+id/next_chap_button"
+                android:id="@+id/next_c_chap2_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="204dp"
