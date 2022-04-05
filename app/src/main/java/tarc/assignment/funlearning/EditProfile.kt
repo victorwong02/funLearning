@@ -18,9 +18,8 @@ class EditProfile : Fragment() {
         binding.saveInfo.setOnClickListener{ editProfile() }
 
         binding.changePswd.setOnClickListener{
-            startActivity(Intent(this, ForgetPasswordActivity::class.java))
+            startActivity(Intent(context, ForgetPasswordActivity::class.java))
         }
-
     }
 
     private fun editProfile() {
@@ -29,22 +28,22 @@ class EditProfile : Fragment() {
 
         if (newName.trim() == null) {
             if(newEmail.trim() == null) {
-                Toast.makeText(this, "Nothing Has Been Updated", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Nothing Has Been Updated", Toast.LENGTH_SHORT).show()
             }
             else {
                 binding1.userEmail.text = getString(R.string.user_email,newEmail)
-                Toast.makeText(this, "Profile Updated", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Profile Updated", Toast.LENGTH_SHORT).show()
             }
         }
         else{
             if(newEmail.trim() == null) {
                 binding1.userName.text = getString(R.string.user_name,newName)
-                Toast.makeText(this, "Profile Updated", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Profile Updated", Toast.LENGTH_SHORT).show()
             }
             else {
                 binding1.userEmail.text = getString(R.string.user_email,newEmail)
                 binding1.userName.text = getString(R.string.user_name,newName)
-                Toast.makeText(this, "Profile Updated", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Profile Updated", Toast.LENGTH_SHORT).show()
             }
         }
 

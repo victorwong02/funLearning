@@ -20,7 +20,7 @@ class Profile : Fragment() {
         }
 
         binding.logoutButton.setOnClickListener{
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(context, LoginActivity::class.java))
 
         }
 

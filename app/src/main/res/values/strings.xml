@@ -87,9 +87,21 @@
     <string name="CChap1WhyLearnCDes">It is one of the most popular programming language in the world\n\nIf you know C, you will have no problem to learn other popular programming languages such as Java, Python, C++, C#, etc, as the syntax is similar\n\nC is very fast, compared to other programming languages, like Java and Python\n\nC is very versatile; it can be used in both applications and technologies</string>
 
 
+    <!--Hui Yi's string-->
+    <!--Profile-->
+    <string name="user_name">Name : %s</string>
+    <string name="user_email">Email : %s</string>
+    <string name="changeprofile_button_text">Change Profile Details</string>
+    <string name="logout_buttontext">Logout</string>
+    <string name="history_title">History</string>
+    <string name="html_language_progress">HTML Language Progress</string>
+    <string name="c_language_progress">C Language Progress</string>
 
-
-
+    <!--Edit Profile-->
+    <string name="enter_new_name">Enter New Name</string>
+    <string name="enter_new_email">Enter New Email</string>
+    <string name="save_buttontext">Save</string>
+    <string name="change_password_button">Change Password</string>
 
 
 
