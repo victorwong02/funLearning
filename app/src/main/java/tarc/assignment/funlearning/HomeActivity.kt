@@ -20,7 +20,7 @@ import androidx.recyclerview.widget.RecyclerView
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.home)
+        setContentView(R.layout.fragment_home)
 
         val lang = findViewById<ListView>(R.id.type_of_language)
         val langName = arrayOf("HTML", "C", "Java", "JavaScript", "Kotlin", "C++")
@@ -30,10 +30,6 @@ class HomeActivity : AppCompatActivity() {
         )
 
         lang.adapter = arrayAdapter
-
-        lang.setOnItemClickListener { adapterView, view, i, l ->
-
-        }
 
     }
 }

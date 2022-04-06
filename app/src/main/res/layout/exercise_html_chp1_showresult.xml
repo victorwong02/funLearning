@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,258 +7,263 @@
     android:backgroundTint="#8BC34A"
     tools:context=".lesson_html_chp1">
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/HTML_Chap1_Exe_ShowResult"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="15dp">
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="64dp"
+            android:text="@string/Chap1Exe"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/HTML_Chap1_Exe_ShowResult"
+        <ProgressBar
+            android:id="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="12dp"
+            android:indeterminate="false"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult" />
+
+        <TextView
+            android:id="@+id/percentage_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hudj"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
+            app:layout_constraintEnd_toEndOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
+            app:layout_constraintTop_toTopOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage" />
+
+        <TextView
+            android:id="@+id/correct_ques_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/numCorrectQues"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage" />
+
+        <TextView
+            android:id="@+id/num_correct_ques"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="184dp"
+            android:layout_marginTop="20dp"
+            android:text="test"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage" />
+
+        <TextView
+            android:id="@+id/HTML_chap1_ans_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="350dp"
+            android:text="@string/ansTitle"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult" />
+
+        <TextView
+            android:id="@+id/HTML_Chap1_Exe_Q1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/htmlChap1ExeQ1"
+            app:layout_constraintStart_toStartOf="@+id/HTML_chap1_ans_title"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_chap1_ans_title" />
+
+        <RadioGroup
+            android:id="@+id/HTML_Chap1_Exe_Q1_Opt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q1"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q1">
+
+            <RadioButton
+                android:id="@+id/HTML_Chap1_Exe_Q1_Opt1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="64dp"
-                android:text="@string/Chap1Exe"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:textStyle="bold"/>
-
-            <ImageView
-                android:id="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="12dp"
-                android:contentDescription="@string/htmlDocSamplePic"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult"
-                app:srcCompat="@drawable/html_document_sample_"/>
-
-            <TextView
-                android:id="@+id/correct_ques_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/numCorrectQues"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/num_correct_ques"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="184dp"
-                android:layout_marginTop="20dp"
-                android:text="test"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage" />
-
-            <TextView
-                android:id="@+id/HTML_chap1_ans_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="350dp"
-                android:text="@string/ansTitle"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/HTML_Chap1_Exe_Q1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/htmlChap1ExeQ1"
-                app:layout_constraintStart_toStartOf="@+id/HTML_chap1_ans_title"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_chap1_ans_title" />
-
-            <RadioGroup
-                android:id="@+id/HTML_Chap1_Exe_Q1_Opt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q1"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q1">
-
-                <RadioButton
-                    android:checked="true"
-                    android:id="@+id/HTML_Chap1_Exe_Q1_Opt1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/htmlChap1ExeQ1Opt1" />
-
-                <RadioButton
-                    android:id="@+id/HTML_Chap1_Exe_Q1_Opt2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/htmlChap1ExeQ1Opt2" />
-
-                <RadioButton
-                    android:id="@+id/HTML_Chap1_Exe_Q1_Opt3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/htmlChap1ExeQ1Opt3" />
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/HTML_Chap1_Exe_Q2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:text="@string/htmlChap1ExeQ2"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q1_Opt"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q1_Opt" />
-
-            <EditText
-                android:id="@+id/HTML_Chap1_Exe_Q2_Input"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="6"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q2"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q2" />
-
-            <TextView
-                android:id="@+id/HTML_Chap1_Exe_Q3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:text="@string/htmlChap1ExeQ3"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q2_Input"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q2_Input" />
-
-            <CheckBox
-                android:id="@+id/HTML_Chap1_Exe_Q3_Choose1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="h1 tag"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q3"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q3" />
-
-            <CheckBox
-                android:id="@+id/HTML_Chap1_Exe_Q3_Choose2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="!DOCTYPE html tag"
                 android:checked="true"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q3_Choose1"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q3_Choose1" />
+                android:text="@string/htmlChap1ExeQ1Opt1" />
 
-            <CheckBox
-                android:id="@+id/HTML_Chap1_Exe_Q3_Choose3"
+            <RadioButton
+                android:id="@+id/HTML_Chap1_Exe_Q1_Opt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="body tag"
+                android:text="@string/htmlChap1ExeQ1Opt2" />
+
+            <RadioButton
+                android:id="@+id/HTML_Chap1_Exe_Q1_Opt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/htmlChap1ExeQ1Opt3" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/HTML_Chap1_Exe_Q2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/htmlChap1ExeQ2"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q1_Opt"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q1_Opt" />
+
+        <EditText
+            android:id="@+id/HTML_Chap1_Exe_Q2_Input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="6"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q2"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q2" />
+
+        <TextView
+            android:id="@+id/HTML_Chap1_Exe_Q3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/htmlChap1ExeQ3"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q2_Input"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q2_Input" />
+
+        <CheckBox
+            android:id="@+id/HTML_Chap1_Exe_Q3_Choose1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="h1 tag"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q3"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q3" />
+
+        <CheckBox
+            android:id="@+id/HTML_Chap1_Exe_Q3_Choose2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="!DOCTYPE html tag"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q3_Choose1"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q3_Choose1" />
+
+        <CheckBox
+            android:id="@+id/HTML_Chap1_Exe_Q3_Choose3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="body tag"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q3_Choose2"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q3_Choose2" />
+
+        <CheckBox
+            android:id="@+id/HTML_Chap1_Exe_Q3_Choose4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="p tag"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q3_Choose3"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q3_Choose3" />
+
+        <TextView
+            android:id="@+id/HTML_Chap1_Exe_Q4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/htmlChap1ExeQ4"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q3_Choose4"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q3_Choose4" />
+
+        <RadioGroup
+            android:id="@+id/HTML_Chap1_Exe_Q4_Opt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q4"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q4">
+
+            <RadioButton
+                android:id="@+id/HTML_Chap1_Exe_Q4_Opt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="p tag" />
+
+            <RadioButton
+                android:id="@+id/HTML_Chap1_Exe_Q4_Opt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:checked="true"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q3_Choose2"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q3_Choose2" />
+                android:text="a href tag" />
 
-            <CheckBox
-                android:id="@+id/HTML_Chap1_Exe_Q3_Choose4"
+            <RadioButton
+                android:id="@+id/HTML_Chap1_Exe_Q4_Opt3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="p tag"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q3_Choose3"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q3_Choose3" />
+                android:text="head tag" />
+        </RadioGroup>
 
-            <TextView
-                android:id="@+id/HTML_Chap1_Exe_Q4"
+        <TextView
+            android:id="@+id/HTML_Chap1_Exe_Q5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/htmlChap1ExeQ5"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q4_Opt"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q4_Opt" />
+
+        <RadioGroup
+            android:id="@+id/HTML_Chap1_Exe_Q5_Opt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q5"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q5">
+
+            <RadioButton
+                android:id="@+id/HTML_Chap1_Exe_Q5_Opt1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:text="@string/htmlChap1ExeQ4"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q3_Choose4"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q3_Choose4" />
+                android:checked="true"
+                android:text="img src tag" />
 
-            <RadioGroup
-                android:id="@+id/HTML_Chap1_Exe_Q4_Opt"
+            <RadioButton
+                android:id="@+id/HTML_Chap1_Exe_Q5_Opt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q4"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q4">
+                android:text="a href tag" />
 
-                <RadioButton
-                    android:id="@+id/HTML_Chap1_Exe_Q4_Opt1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="p tag" />
-
-                <RadioButton
-                    android:id="@+id/HTML_Chap1_Exe_Q4_Opt2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="a href tag"
-                    android:checked="true"/>
-
-                <RadioButton
-                    android:id="@+id/HTML_Chap1_Exe_Q4_Opt3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="head tag" />
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/HTML_Chap1_Exe_Q5"
+            <RadioButton
+                android:id="@+id/HTML_Chap1_Exe_Q5_Opt3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:text="@string/htmlChap1ExeQ5"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q4_Opt"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q4_Opt" />
+                android:text="head tag" />
+        </RadioGroup>
 
-            <RadioGroup
-                android:id="@+id/HTML_Chap1_Exe_Q5_Opt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q5"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q5">
+        <Button
+            android:id="@+id/next_exe2_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#8BC34A"
+            android:text="@string/nextExeButton"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q5_Opt"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q5_Opt" />
 
-                <RadioButton
-                    android:id="@+id/HTML_Chap1_Exe_Q5_Opt1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="img src tag"
-                    android:checked="true"/>
+        <Button
+            android:id="@+id/next_chap2_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="204dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#8BC34A"
+            android:text="@string/nextChapButton"
+            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q5_Opt"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q5_Opt" />
 
-                <RadioButton
-                    android:id="@+id/HTML_Chap1_Exe_Q5_Opt2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="a href tag" />
-
-                <RadioButton
-                    android:id="@+id/HTML_Chap1_Exe_Q5_Opt3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="head tag" />
-            </RadioGroup>
-
-            <Button
-                android:id="@+id/next_exe2_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:text="@string/nextExeButton"
-                android:backgroundTint="#8BC34A"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q5_Opt"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q5_Opt" />
-
-            <Button
-                android:id="@+id/next_chap2_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="204dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/nextChapButton"
-                android:backgroundTint="#8BC34A"
-                app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q5_Opt"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q5_Opt" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-</FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -99,6 +99,8 @@
     <string name="html_language_progress">HTML Language Progress</string>
     <string name="c_language_progress">C Language Progress</string>
 
+    <string name="profile">Profile Pic</string>
+
     <!--Edit Profile-->
     <string name="enter_new_name">Enter New Name</string>
     <string name="enter_new_email">Enter New Email</string>

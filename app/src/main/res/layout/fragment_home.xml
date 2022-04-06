@@ -2,17 +2,13 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
 
-    <!-- Just to show this fragment, can be deleted -->
-    <TextView
-        android:id="@+id/textView"
+    <ListView
+        android:layout_margin="50dp"
+        android:id="@+id/type_of_language"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Home Fragment"
-        android:textColor="@color/purple"
-        android:textSize="25sp"
-        android:textStyle="bold|italic" />
+        android:layout_height="wrap_content"/>
 
 </FrameLayout>

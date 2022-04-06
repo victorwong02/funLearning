@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 class lesson_html_chp1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.home)
+        setContentView(R.layout.fragment_home)
 
 
 
