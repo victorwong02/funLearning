@@ -22,14 +22,14 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_home)
 
-        val lang = findViewById<ListView>(R.id.type_of_language)
-        val langName = arrayOf("HTML", "C", "Java", "JavaScript", "Kotlin", "C++")
-
-        val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
-            this, android.R.layout.simple_list_item_1, langName
-        )
-
-        lang.adapter = arrayAdapter
+//        val lang = findViewById<ListView>(R.id.type_of_language)
+//        val langName = arrayOf("HTML", "C", "Java", "JavaScript", "Kotlin", "C++")
+//
+//        val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
+//            this, android.R.layout.simple_list_item_1, langName
+//        )
+//
+//        lang.adapter = arrayAdapter
 
     }
 }

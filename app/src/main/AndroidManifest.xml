@@ -29,6 +29,12 @@
             android:name=".LoginActivity"
             android:exported="false">
         </activity>
+
+        <activity
+            android:name=".EditProfile"
+            android:exported="false">
+
+        </activity>
     </application>
 
 </manifest>

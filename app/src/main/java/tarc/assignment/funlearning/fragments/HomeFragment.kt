@@ -25,6 +25,8 @@ class HomeFragment : Fragment() {
 
     }
 
+    fun testing(view: View) {
 
+    }
 
 }

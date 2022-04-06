@@ -1,190 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".lesson_html_chp1">
+    tools:context=".LessonHTMLChp1">
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/HTML_chap1_title"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="15dp">
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="64dp"
+            android:text="@string/htmlChap1Title"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/HTML_chap1_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="64dp"
-                android:text="@string/htmlChap1Title"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/HTML_doc_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/htmlDocSample"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/HTML_chap1_title"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_chap1_title" />
 
-            <TextView
-                android:id="@+id/HTML_doc_des"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/htmlDocSample"
-                app:layout_constraintStart_toStartOf="@+id/HTML_chap1_title"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_chap1_title"
-                android:textStyle="bold"/>
+        <ImageView
+            android:id="@+id/HTML_doc_sample_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/htmlDocSamplePic"
+            app:layout_constraintStart_toStartOf="@+id/HTML_doc_des"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_doc_des"
+            android:src="@drawable/html_document_sample_" />
 
-            <ImageView
-                android:id="@+id/HTML_doc_sample_pic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:contentDescription="@string/htmlDocSamplePic"
-                app:layout_constraintStart_toStartOf="@+id/HTML_doc_des"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_doc_des"
-                app:srcCompat="@drawable/html_document_sample_" />
+        <TextView
+            android:id="@+id/HTML_heading_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/htmlHeadingTitle"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/HTML_doc_sample_pic"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_doc_sample_pic" />
 
-            <TextView
-                android:id="@+id/HTML_heading_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:text="@string/htmlHeadingTitle"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/HTML_doc_sample_pic"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_doc_sample_pic" />
+        <TextView
+            android:id="@+id/HTML_heading_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/htmlHeadingDes"
+            app:layout_constraintStart_toStartOf="@+id/HTML_heading_title"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_heading_title" />
 
-            <TextView
-                android:id="@+id/HTML_heading_des"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/htmlHeadingDes"
-                app:layout_constraintStart_toStartOf="@+id/HTML_heading_title"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_heading_title" />
+        <ImageView
+            android:id="@+id/HTML_heading_sample_pic"
+            android:layout_width="325dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/htmlHeadingSamplePic"
+            app:layout_constraintStart_toStartOf="@+id/HTML_heading_des"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_heading_des"
+            android:src="@drawable/html_heading_sample" />
 
-            <ImageView
-                android:id="@+id/HTML_heading_sample_pic"
-                android:layout_width="325dp"
-                android:layout_height="175dp"
-                android:layout_marginTop="20dp"
-                android:contentDescription="@string/htmlHeadingSamplePic"
-                app:layout_constraintStart_toStartOf="@+id/HTML_heading_des"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_heading_des"
-                app:srcCompat="@drawable/html_heading_sample" />
+        <TextView
+            android:id="@+id/HTML_paragraph_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/htmlParagraphTitle"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/HTML_heading_sample_pic"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_heading_sample_pic" />
 
-            <TextView
-                android:id="@+id/HTML_paragraph_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:text="@string/htmlParagraphTitle"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/HTML_heading_sample_pic"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_heading_sample_pic" />
+        <TextView
+            android:id="@+id/HTML_paragraph_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/htmlParagraphDes"
+            app:layout_constraintStart_toStartOf="@+id/HTML_paragraph_title"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_paragraph_title" />
 
-            <TextView
-                android:id="@+id/HTML_paragraph_des"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/htmlParagraphDes"
-                app:layout_constraintStart_toStartOf="@+id/HTML_paragraph_title"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_paragraph_title" />
+        <ImageView
+            android:id="@+id/HTML_paragraph_sample_pic"
+            android:layout_width="334dp"
+            android:layout_height="123dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/htmlParagraphSamplePic"
+            app:layout_constraintStart_toStartOf="@+id/HTML_paragraph_des"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_paragraph_des"
+            android:src="@drawable/html_paragraph_sample" />
 
-            <ImageView
-                android:id="@+id/HTML_paragraph_sample_pic"
-                android:layout_width="334dp"
-                android:layout_height="123dp"
-                android:layout_marginTop="12dp"
-                android:contentDescription="@string/htmlParagraphSamplePic"
-                app:layout_constraintStart_toStartOf="@+id/HTML_paragraph_des"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_paragraph_des"
-                app:srcCompat="@drawable/html_paragraph_sample" />
+        <TextView
+            android:id="@+id/HTML_link_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/htmlLinkTitle"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/HTML_paragraph_sample_pic"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_paragraph_sample_pic" />
 
-            <TextView
-                android:id="@+id/HTML_link_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:text="@string/htmlLinkTitle"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/HTML_paragraph_sample_pic"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_paragraph_sample_pic" />
+        <TextView
+            android:id="@+id/HTML_link_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/htmlLinkDes"
+            app:layout_constraintStart_toStartOf="@+id/HTML_link_title"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_link_title" />
 
-            <TextView
-                android:id="@+id/HTML_link_des"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/htmlLinkDes"
-                app:layout_constraintStart_toStartOf="@+id/HTML_link_title"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_link_title" />
+        <ImageView
+            android:id="@+id/HTML_link_sample_pic"
+            android:layout_width="334dp"
+            android:layout_height="123dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/htmlLinkSamplePic"
+            app:layout_constraintStart_toStartOf="@+id/HTML_link_des"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_link_des"
+            android:src="@drawable/html_links_sample" />
 
-            <ImageView
-                android:id="@+id/HTML_link_sample_pic"
-                android:layout_width="334dp"
-                android:layout_height="123dp"
-                android:layout_marginTop="12dp"
-                android:contentDescription="@string/htmlLinkSamplePic"
-                app:layout_constraintStart_toStartOf="@+id/HTML_link_des"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_link_des"
-                app:srcCompat="@drawable/html_links_sample" />
+        <TextView
+            android:id="@+id/HTML_image_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/htmlImageTitle"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/HTML_link_sample_pic"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_link_sample_pic" />
 
-            <TextView
-                android:id="@+id/HTML_image_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:text="@string/htmlImageTitle"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/HTML_link_sample_pic"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_link_sample_pic" />
+        <TextView
+            android:id="@+id/HTML_image_des"
+            android:layout_width="353dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/htmlImageDes"
+            app:layout_constraintStart_toStartOf="@+id/HTML_image_title"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_image_title" />
 
-            <TextView
-                android:id="@+id/HTML_image_des"
-                android:layout_width="353dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/htmlImageDes"
-                app:layout_constraintStart_toStartOf="@+id/HTML_image_title"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_image_title" />
+        <ImageView
+            android:id="@+id/HTML_image_sample_pic"
+            android:layout_width="334dp"
+            android:layout_height="123dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/htmlImageSamplePic"
+            app:layout_constraintStart_toStartOf="@+id/HTML_image_des"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_image_des"
+            android:src="@drawable/html_images_sample" />
 
-            <ImageView
-                android:id="@+id/HTML_image_sample_pic"
-                android:layout_width="334dp"
-                android:layout_height="123dp"
-                android:layout_marginTop="12dp"
-                android:contentDescription="@string/htmlImageSamplePic"
-                app:layout_constraintStart_toStartOf="@+id/HTML_image_des"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_image_des"
-                app:srcCompat="@drawable/html_images_sample" />
+        <Button
+            android:id="@+id/take_html_exe1_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#8BC34A"
+            android:onClick="takeExe1"
+            android:text="@string/takeExeButton"
+            app:layout_constraintStart_toStartOf="@+id/HTML_image_sample_pic"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_image_sample_pic" />
 
-            <Button
-                android:id="@+id/take_html_exe1_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:text="@string/takeExeButton"
-                android:backgroundTint="#8BC34A"
-                app:layout_constraintStart_toStartOf="@+id/HTML_image_sample_pic"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_image_sample_pic" />
-
-            <Button
-                android:id="@+id/next_html_chap2_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="204dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/nextChapButton"
-                android:backgroundTint="#8BC34A"
-                app:layout_constraintStart_toStartOf="@+id/HTML_image_sample_pic"
-                app:layout_constraintTop_toBottomOf="@+id/HTML_image_sample_pic" />
+        <Button
+            android:id="@+id/next_html_chap2_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="204dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#8BC34A"
+            android:text="@string/nextChapButton"
+            app:layout_constraintStart_toStartOf="@+id/HTML_image_sample_pic"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_image_sample_pic" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-</FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

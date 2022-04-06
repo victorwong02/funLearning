@@ -21,6 +21,4 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavView.setupWithNavController(findNavController(R.id.nav_fragment))
     }
-
-
 }
