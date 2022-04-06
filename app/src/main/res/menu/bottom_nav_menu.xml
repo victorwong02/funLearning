@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/nav_home"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/home_icon"
         android:title="@string/nav_home" />
     <item
-        android:id="@+id/nav_profile"
+        android:id="@+id/profile"
         android:icon="@drawable/profile_icon"
         android:title="@string/nav_profile" />
 </menu>

@@ -10,29 +10,23 @@ import tarc.assignment.funlearning.databinding.FragmentProfileBinding
 
 class Profile : Fragment() {
 
-    private lateinit var binding: FragmentProfileBinding
+//     private lateinit var binding: FragmentProfileBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding.editProfile.setOnClickListener{
+//         binding.editProfile.setOnClickListener {
+//
+//         }
 
-        }
-
-        binding.logoutButton.setOnClickListener{
-            startActivity(Intent(context, LoginActivity::class.java))
-
-        }
-
+//        binding.logoutButton.setOnClickListener {
+//            startActivity(Intent(context, LoginActivity::class.java))
+//        }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
-
-    }
+    ): View? = inflater.inflate(R.layout.fragment_profile, container, false)
 
 }
