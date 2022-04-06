@@ -17,7 +17,7 @@
             android:layout_width="146dp"
             android:layout_height="146dp"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="40dp"
             android:contentDescription="@string/profile"
             android:src="@drawable/profile_pic"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
             android:layout_marginStart="28dp"
             android:layout_marginTop="32dp"
             android:text="@string/user_name"
-            android:textSize="14sp"
+            android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/profilepic"
             app:layout_constraintTop_toTopOf="@+id/profilepic" />
 
@@ -42,6 +42,7 @@
             android:layout_marginStart="28dp"
             android:layout_marginTop="30dp"
             android:text="@string/user_email"
+            android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/profilepic"
             app:layout_constraintTop_toBottomOf="@+id/user_name" />
 
@@ -49,10 +50,10 @@
             android:id="@+id/edit_profile"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="25dp"
             android:backgroundTint="#8BC34A"
             android:text="@string/change_profile_button_text"
-            android:textSize="12sp"
+            android:textSize="13sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.551"
             app:layout_constraintStart_toStartOf="parent"
@@ -66,6 +67,7 @@
             android:layout_marginBottom="4dp"
             android:backgroundTint="#8BC34A"
             android:text="@string/logout_button_text"
+            android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/edit_profile"
             app:layout_constraintTop_toBottomOf="@+id/c_exercise" />
@@ -110,8 +112,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:text="Notes : Not Started"
+            android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/html_info" />
 
@@ -122,6 +125,7 @@
             android:layout_marginStart="80dp"
             android:layout_marginTop="8dp"
             android:text="Exercise : Not Started"
+            android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/html_notes" />
 
@@ -130,8 +134,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:text="Notes : Not Started "
+            android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/c_info" />
 
@@ -142,6 +147,7 @@
             android:layout_marginStart="80dp"
             android:layout_marginTop="8dp"
             android:text="Exercise : Not Started"
+            android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/c_notes" />
 
