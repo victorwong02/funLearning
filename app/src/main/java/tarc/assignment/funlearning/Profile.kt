@@ -4,6 +4,7 @@ package tarc.assignment.funlearning
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
+import android.graphics.Color
 import android.media.metrics.Event
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -40,9 +41,9 @@ class Profile : Fragment() {
             logoutDialog(it)
         }
 
-//         binding.editProfile.setOnClickListener {
-//
-//         }
+        binding.editProfile.setOnClickListener {
+            
+        }
 
         val view = binding.root
         return view
@@ -69,6 +70,9 @@ class Profile : Fragment() {
 
         val alert : AlertDialog = builder.create()
         alert.show()
+
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(Color.parseColor("#8BC34A"))
+        alert.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(Color.parseColor("#8BC34A"))
     }
 
 }
