@@ -1,11 +1,18 @@
 package tarc.assignment.funlearning
 
+
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
+import android.media.metrics.Event
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import tarc.assignment.funlearning.databinding.FragmentProfileBinding
 
@@ -30,8 +37,7 @@ class Profile : Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.logoutButton.setOnClickListener {
-            firebaseAuth.signOut()
-            startActivity(Intent( context, LoginActivity::class.java))
+            logoutDialog(it)
         }
 
 //         binding.editProfile.setOnClickListener {
@@ -47,5 +53,22 @@ class Profile : Fragment() {
         _binding = null
     }
 
+    private fun logoutDialog(view: View){
+
+        val builder = AlertDialog.Builder(activity)
+        builder.setTitle("Logout Alert")
+        builder.setMessage("Confirm to Logout?")
+        builder.setPositiveButton("Logout",DialogInterface.OnClickListener{dialog, which ->
+            firebaseAuth.signOut()
+            startActivity(Intent( context, LoginActivity::class.java))
+            dialog.cancel()
+        })
+        builder.setNegativeButton("Cancel",DialogInterface.OnClickListener{dialog, which ->
+            dialog.cancel()
+        })
+
+        val alert : AlertDialog = builder.create()
+        alert.show()
+    }
 
 }
