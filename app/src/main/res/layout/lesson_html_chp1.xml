@@ -11,16 +11,21 @@
         android:layout_height="wrap_content"
         android:padding="15dp">
 
+        <VideoView
+            android:id="@+id/intro_HTML_vid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <TextView
             android:id="@+id/HTML_chap1_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="64dp"
             android:text="@string/htmlChap1Title"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="@+id/intro_HTML_vid"
+            app:layout_constraintTop_toBottomOf="@+id/intro_HTML_vid" />
 
         <TextView
             android:id="@+id/HTML_doc_des"

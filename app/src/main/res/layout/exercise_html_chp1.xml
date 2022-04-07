@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="#8BC34A"
-    tools:context=".ExeHTMLChp1ShowResult">
+    tools:context=".ExeHTMLChp1">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         android:padding="15dp">
 
         <TextView
-            android:id="@+id/HTML_Chap1_Exe_ShowResult"
+            android:id="@+id/HTML_chap1_exe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Chap1Exe"
@@ -21,67 +21,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ProgressBar
-            android:id="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="12dp"
-            android:indeterminate="false"
-            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult"
-            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult" />
-
-        <TextView
-            android:id="@+id/percentage_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="hudj"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
-            app:layout_constraintEnd_toEndOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
-            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
-            app:layout_constraintTop_toTopOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage" />
-
-        <TextView
-            android:id="@+id/correct_ques_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/numCorrectQues"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
-            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage" />
-
-        <TextView
-            android:id="@+id/num_correct_ques"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="184dp"
-            android:layout_marginTop="20dp"
-            android:text="test"
-            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage"
-            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult_Percentage" />
-
-        <TextView
-            android:id="@+id/HTML_chap1_ans_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="300dp"
-            android:text="@string/ansTitle"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_ShowResult"
-            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_ShowResult" />
-
         <TextView
             android:id="@+id/HTML_Chap1_Exe_Q1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:text="@string/htmlChap1ExeQ1"
-            app:layout_constraintStart_toStartOf="@+id/HTML_chap1_ans_title"
-            app:layout_constraintTop_toBottomOf="@+id/HTML_chap1_ans_title" />
+            app:layout_constraintStart_toStartOf="@+id/HTML_chap1_exe"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_chap1_exe" />
 
         <RadioGroup
             android:id="@+id/HTML_Chap1_Exe_Q1_Opt"
@@ -94,7 +42,6 @@
                 android:id="@+id/HTML_Chap1_Exe_Q1_Opt1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
                 android:text="@string/htmlChap1ExeQ1Opt1" />
 
             <RadioButton
@@ -123,7 +70,7 @@
             android:id="@+id/HTML_Chap1_Exe_Q2_Input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="6"
+            android:hint="@string/htmlChap1ExeQ2Input"
             app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q2"
             app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q2" />
 
@@ -148,7 +95,6 @@
             android:id="@+id/HTML_Chap1_Exe_Q3_Choose2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="!DOCTYPE html tag"
             app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q3_Choose1"
             app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q3_Choose1" />
@@ -157,7 +103,6 @@
             android:id="@+id/HTML_Chap1_Exe_Q3_Choose3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="body tag"
             app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q3_Choose2"
             app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q3_Choose2" />
@@ -196,7 +141,6 @@
                 android:id="@+id/HTML_Chap1_Exe_Q4_Opt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
                 android:text="a href tag" />
 
             <RadioButton
@@ -226,7 +170,6 @@
                 android:id="@+id/HTML_Chap1_Exe_Q5_Opt1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
                 android:text="img src tag" />
 
             <RadioButton
@@ -243,23 +186,13 @@
         </RadioGroup>
 
         <Button
-            android:id="@+id/next_exe2_button"
+            android:id="@+id/HTML_Chap1_Exe_ShowResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginStart="216dp"
+            android:layout_marginTop="36dp"
             android:backgroundTint="#8BC34A"
-            android:text="@string/nextExeButton"
-            app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q5_Opt"
-            app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q5_Opt" />
-
-        <Button
-            android:id="@+id/next_chap2_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="204dp"
-            android:layout_marginTop="40dp"
-            android:backgroundTint="#8BC34A"
-            android:text="@string/nextChapButton"
+            android:text="@string/showResultButton"
             app:layout_constraintStart_toStartOf="@+id/HTML_Chap1_Exe_Q5_Opt"
             app:layout_constraintTop_toBottomOf="@+id/HTML_Chap1_Exe_Q5_Opt" />
 

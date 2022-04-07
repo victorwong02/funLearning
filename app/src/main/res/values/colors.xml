@@ -19,6 +19,7 @@
     <color name="purple">#FFA02FEB</color>
     <color name="light_purple">#FFE3C1F9</color>
     <color name="light_yellow">#FFFFE0</color>
+    <color name="dark_grey">#616161</color>
 
     <!-- Nav Bar Color Settings -->
     <color name="nav_bar_bg_color">@color/green</color>

@@ -88,6 +88,8 @@
     <string name="CChap1WhyLearnCDes">It is one of the most popular programming language in the world\n\nIf you know C, you will have no problem to learn other popular programming languages such as Java, Python, C++, C#, etc, as the syntax is similar\n\nC is very fast, compared to other programming languages, like Java and Python\n\nC is very versatile; it can be used in both applications and technologies</string>
     <!--Chapter 2-->
     <string name="CChap2Title">Chapter 2</string>
+    <!--Home-->
+
 
     <!--Hui Yi's string-->
     <!--Profile-->
