@@ -6,24 +6,27 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import tarc.assignment.funlearning.databinding.FragmentProfileBinding
 
 class Profile : Fragment() {
 
-    private var _binding: FragmentProfileBinding? = null
-
-    private val binding get() = _binding!!
-
     private lateinit var firebaseAuth: FirebaseAuth
+
+    private var _binding: FragmentProfileBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-//         binding.editProfile.setOnClickListener {
+    }
 
-//         }
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+
 
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
@@ -32,13 +35,11 @@ class Profile : Fragment() {
             firebaseAuth.signOut()
             checkUser()
         }
-    }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+//         binding.editProfile.setOnClickListener {
+//
+//         }
+
         val view = binding.root
         return view
     }
@@ -56,7 +57,7 @@ class Profile : Fragment() {
             val email = firebaseUser.email
         }
         else {
-            startActivity(Intent(context, LoginActivity::class.java))
+            startActivity(Intent( context, LoginActivity::class.java))
         }
     }
 
