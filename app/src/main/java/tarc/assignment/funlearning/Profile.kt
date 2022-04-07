@@ -53,7 +53,7 @@ class Profile : Fragment() {
     private fun logoutDialog(view: View){
 
         val builder = AlertDialog.Builder(activity)
-        builder.setTitle("Logout Alert")
+        builder.setTitle("Logout Confirmation")
         builder.setMessage("Confirm to Logout?")
         builder.setPositiveButton("Logout",DialogInterface.OnClickListener{dialog, which ->
             firebaseAuth.signOut()
