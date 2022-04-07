@@ -29,11 +29,10 @@ class Profile : Fragment() {
 
 
         firebaseAuth = FirebaseAuth.getInstance()
-        checkUser()
 
         binding.logoutButton.setOnClickListener {
             firebaseAuth.signOut()
-            checkUser()
+            startActivity(Intent( context, LoginActivity::class.java))
         }
 
 //         binding.editProfile.setOnClickListener {
@@ -49,16 +48,5 @@ class Profile : Fragment() {
         _binding = null
     }
 
-    private fun checkUser() {
-        //check whether is logged in
-        val firebaseUser = firebaseAuth.currentUser
-        if (firebaseUser != null){
-            //get user info
-            val email = firebaseUser.email
-        }
-        else {
-            startActivity(Intent( context, LoginActivity::class.java))
-        }
-    }
 
 }
