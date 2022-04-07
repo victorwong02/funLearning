@@ -40,6 +40,7 @@ class Profile : Fragment() {
 
         }
 
+        //get history record
         binding.htmlNotes.text = getString(R.string.html_lastnotes)
         binding.htmlExercise.text = getString(R.string.html_lastexercise)
         binding.cNotes.text = getString(R.string.c_lastnotes)
