@@ -26,8 +26,7 @@ class Profile : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
-
-
+        
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
 
