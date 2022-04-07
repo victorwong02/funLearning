@@ -1,6 +1,5 @@
 package tarc.assignment.funlearning
 
-
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
@@ -22,9 +21,6 @@ class Profile : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
-
     }
 
     override fun onCreateView(
