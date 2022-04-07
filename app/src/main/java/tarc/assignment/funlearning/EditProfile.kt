@@ -14,10 +14,12 @@ import tarc.assignment.funlearning.databinding.FragmentProfileBinding
 class EditProfile : Fragment() {
 
     private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var binding1: FragmentProfileBinding
 
     private var _binding: FragmentEditProfileBinding? = null
     private val binding get() = _binding!!
+
+    private var _binding1: FragmentProfileBinding? = null
+    private val binding1 get() = _binding1!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +33,7 @@ class EditProfile : Fragment() {
         val view = binding.root
 
         _binding = FragmentEditProfileBinding.inflate(inflater, container, false)
+        _binding1 = FragmentProfileBinding.inflate(inflater, container, false)
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.saveInfo.setOnClickListener{ editProfile() }
@@ -45,6 +48,7 @@ class EditProfile : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        _binding1 = null
     }
 
     private fun editProfile() {
