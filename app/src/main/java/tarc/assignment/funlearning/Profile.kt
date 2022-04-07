@@ -5,15 +5,11 @@ import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
-import android.media.metrics.Event
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import tarc.assignment.funlearning.databinding.FragmentProfileBinding
 
@@ -42,7 +38,7 @@ class Profile : Fragment() {
         }
 
         binding.editProfile.setOnClickListener {
-            
+
         }
 
         val view = binding.root
