@@ -23,14 +23,17 @@ class Profile : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val view = binding.root
+
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
-        
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.logoutButton.setOnClickListener {
@@ -41,7 +44,11 @@ class Profile : Fragment() {
 
         }
 
-        val view = binding.root
+        binding.htmlNotes.text = getString(R.string.html_lastnotes)
+        binding.htmlExercise.text = getString(R.string.html_lastexercise)
+        binding.cNotes.text = getString(R.string.c_lastnotes)
+        binding.cExercise.text = getString(R.string.c_lastexercise)
+
         return view
     }
 

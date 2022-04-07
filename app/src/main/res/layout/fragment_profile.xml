@@ -113,7 +113,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:layout_marginTop="20dp"
-            android:text="Notes : Not Started"
+            android:text="@string/html_lastnotes"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/html_info" />
@@ -124,7 +124,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:layout_marginTop="8dp"
-            android:text="Exercise : Not Started"
+            android:text="@string/html_lastexercise"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/html_notes" />
@@ -135,7 +135,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:layout_marginTop="20dp"
-            android:text="Notes : Not Started "
+            android:text="@string/c_lastnotes"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/c_info" />
@@ -146,7 +146,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:layout_marginTop="8dp"
-            android:text="Exercise : Not Started"
+            android:text="@string/c_lastexercise"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/c_notes" />

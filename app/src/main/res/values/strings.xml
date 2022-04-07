@@ -117,6 +117,10 @@
     <!-- Navigation Bar-->
     <string name="nav_home">Home</string>
     <string name="nav_profile">Profile</string>
+    <string name="c_lastexercise">Exercise : %s</string>
+    <string name="c_lastnotes">Notes : %s</string>
+    <string name="html_lastexercise">Exercise : %s</string>
+    <string name="html_lastnotes">Notes : %s</string>
 
 
 </resources>
