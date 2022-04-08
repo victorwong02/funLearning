@@ -39,6 +39,27 @@
                 android:textSize="12dp"
                 android:padding="20dp"/>
 
+            <Button
+                android:id="@+id/take_lesson_button"
+                android:layout_margin="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lang_des"
+                android:text="Take Exercise"
+                android:textColor="@color/dark_grey"
+                android:backgroundTint="@color/light_green"/>
+
+            <Button
+                android:id="@+id/take_exe_button"
+                android:layout_margin="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lang_des"
+                android:layout_alignParentEnd="true"
+                android:text="Next Chapter"
+                android:textColor="@color/dark_grey"
+                android:backgroundTint="@color/light_green"/>
+
         </RelativeLayout>
 
     </LinearLayout>

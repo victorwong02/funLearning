@@ -89,6 +89,10 @@
     <!--Chapter 2-->
     <string name="CChap2Title">Chapter 2</string>
     <!--Home-->
+    <string name="html_lang_name_1">Chapter 1 : Introduction to HTML</string>
+    <string name="html_lang_name_2">Chapter 2 : HTML Attributes</string>
+    <string name="html_lang_name_3">Chapter 3</string>
+
 
 
     <!--Hui Yi's string-->
