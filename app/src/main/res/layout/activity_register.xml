@@ -22,7 +22,24 @@
         android:layout_below="@id/titleLabel"
         style="@style/TextAppearance.MaterialComponents.Caption"/>
 
+    <!--Name-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usernameTil"
+        android:layout_above="@+id/emailTil"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
 
+        <EditText
+            android:id="@+id/usernameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/username"
+            android:importantForAutofill="no" />
+
+    </com.google.android.material.textfield.TextInputLayout>
     <!--Email-->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailTil"

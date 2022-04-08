@@ -114,8 +114,6 @@
     <string name="change_password_button">Change Password</string>
 
 
-
-
     <string name="forgot_password">Forgot Password</string>
     <string name="submit">Submit</string>
     <string name="reset_password">Reset Password</string>
@@ -127,6 +125,7 @@
     <string name="c_lastnotes">Notes : %s</string>
     <string name="html_lastexercise">Exercise : %s</string>
     <string name="html_lastnotes">Notes : %s</string>
+    <string name="username">Username</string>
 
 
 </resources>
