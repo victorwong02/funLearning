@@ -121,6 +121,7 @@
     <string name="c_lastnotes">Notes : %s</string>
     <string name="html_lastexercise">Exercise : %s</string>
     <string name="html_lastnotes">Notes : %s</string>
+    <string name="username">Username</string>
 
 
 </resources>
