@@ -1,4 +1,4 @@
-package tarc.assignment.funlearning
+package tarc.assignment.funlearning.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,10 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import tarc.assignment.funlearning.ForgetPasswordActivity
+import tarc.assignment.funlearning.R
 import tarc.assignment.funlearning.databinding.FragmentEditProfileBinding
 import tarc.assignment.funlearning.databinding.FragmentProfileBinding
 
-class EditProfile : Fragment() {
+class EditProfileFragment : Fragment() {
 
     private lateinit var firebaseAuth: FirebaseAuth
 
