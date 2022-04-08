@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/editProfile"
-        android:name="tarc.assignment.funlearning.EditProfile"
+        android:name="tarc.assignment.funlearning.fragments.EditProfileFragment"
         android:label="fragment_edit_profile"
         tools:layout="@layout/fragment_edit_profile" />
 </navigation>
