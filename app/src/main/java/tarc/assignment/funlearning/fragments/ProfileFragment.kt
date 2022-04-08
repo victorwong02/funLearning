@@ -5,14 +5,15 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import tarc.assignment.funlearning.LoginActivity
 import tarc.assignment.funlearning.R
 import tarc.assignment.funlearning.databinding.FragmentProfileBinding
+
 
 class ProfileFragment : Fragment() {
 
@@ -20,10 +21,6 @@ class ProfileFragment : Fragment() {
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,7 +36,12 @@ class ProfileFragment : Fragment() {
         }
 
         binding.editProfile.setOnClickListener {
-
+            val fragmentManager =  parentFragmentManager
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            val fragmenteditprofile = EditProfileFragment()
+            fragmentTransaction.replace(R.id.nav_fragment, fragmenteditprofile)
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
         }
 
         //get history record
