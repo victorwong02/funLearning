@@ -72,11 +72,10 @@ class LoginActivity : AppCompatActivity() {
                 //get user info
                 val firebaseUser =  firebaseAuth.currentUser
                 val email = firebaseUser!!.email
-                Toast.makeText(this,"LoggedIn as $email", Toast.LENGTH_SHORT).show()
 
                 //open home screen
                 startActivity(Intent(this,MainActivity::class.java))
-                TODO("Change this main activity to following activity")
+                Toast.makeText(this,"LoggedIn as $email", Toast.LENGTH_SHORT).show()
             }
             .addOnFailureListener {
                 Toast.makeText(this,"Invalid Email or Password", Toast.LENGTH_SHORT).show()
@@ -91,6 +90,7 @@ class LoginActivity : AppCompatActivity() {
         if (firebaseAuth.currentUser != null) {
             //logged in
             startActivity(Intent(this,MainActivity::class.java))
+            finish()
         }
     }
 }
