@@ -26,10 +26,11 @@ class Profile : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = binding.root
+    ): View {
+
 
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
+        val view = binding.root
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.logoutButton.setOnClickListener {
