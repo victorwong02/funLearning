@@ -7,12 +7,21 @@ import android.text.TextUtils
 import android.util.Patterns
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.firestore.EventListener
+import com.google.firebase.firestore.QuerySnapshot
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import tarc.assignment.funlearning.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
 
     //view binding
     private  lateinit var binding:ActivityLoginBinding
+
+
+    //init database
+    private val db = Firebase.firestore
 
     //Firebase Auth
     private lateinit var firebaseAuth: FirebaseAuth
@@ -72,6 +81,8 @@ class LoginActivity : AppCompatActivity() {
                 //get user info
                 val firebaseUser =  firebaseAuth.currentUser
                 val email = firebaseUser!!.email
+
+
 
                 //open home screen
                 startActivity(Intent(this,MainActivity::class.java))
