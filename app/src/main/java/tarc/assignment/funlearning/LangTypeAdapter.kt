@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class LangTypeAdapter(private val langList: List<LangType>): RecyclerView.Adapter<LangTypeAdapter.LanguageType>(){
+class LangTypeAdapter(val langList: List<LangType>): RecyclerView.Adapter<LangTypeAdapter.LangViewHolder>(){
 
-    class LanguageType(itemView: View): RecyclerView.ViewHolder(itemView) {
+    class LangViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
         var langNameText: TextView = itemView.findViewById(R.id.lang_name)
         var langDesText: TextView = itemView.findViewById(R.id.lang_des)
@@ -17,28 +17,37 @@ class LangTypeAdapter(private val langList: List<LangType>): RecyclerView.Adapte
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LanguageType {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.cardview_row, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LangViewHolder {
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.cardview_row, parent, false)
 
-        return LanguageType(view)
+        return LangViewHolder(itemView)
     }
 
     override fun getItemCount(): Int {
         return langList.size
     }
 
-    override fun onBindViewHolder(holder: LanguageType, position: Int) {
+    override fun onBindViewHolder(holder: LangViewHolder, position: Int) {
 
-        val language: LangType = langList[position]
-        holder.langNameText.text = language.langName
-        holder.langDesText.text = language.langDescription
+        val currentItem = langList[position]
+        holder.langNameText.text = currentItem.langName
+        holder.langDesText.text = currentItem.langDescription
 
-        val isExpandable : Boolean = langList[position].expandable
+//        holder.itemView.setOnClickListener {
+//            clickListener.onItemClick(langList.get((position)))
+//        }
+
+        val isExpandable : Boolean = langList[position].visibility
         holder.expandableLayout.visibility = if(isExpandable) View.VISIBLE else View.GONE
 
+        //set OnClickListener to whole linear layout
         holder.linearLayout.setOnClickListener{
-            val lang = langList[position]
-            lang.expandable = !lang.expandable
+//            currentItem.visibility = !currentItem.visibility
+//            notifyItemChanged(position)
+
+
+            val versions = langList[position]
+            versions.visibility = !versions.visibility
             notifyItemChanged(position)
         }
 
