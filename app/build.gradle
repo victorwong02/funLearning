@@ -52,6 +52,6 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    implementation "androidx.recyclerview:recyclerview:1.1.0" //recycler view
-    implementation "androidx.cardview:cardview:1.0.0" //cardview library
+    implementation "androidx.recyclerview:recyclerview:1.2.1" //recycler view
+    implementation "androidx.cardview:cardview:1.0.0" //card view library
 }

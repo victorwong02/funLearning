@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
@@ -78,20 +79,24 @@ class LoginActivity : AppCompatActivity() {
 
         firebaseAuth.signInWithEmailAndPassword(email, password)
             .addOnSuccessListener {
-                //get user info
-                val firebaseUser =  firebaseAuth.currentUser
-                val email = firebaseUser!!.email
+                val firebaseUser = firebaseAuth.currentUser
+                val uid = firebaseUser!!.uid
+
+                db.collection("user").document(uid).get()
+                    .addOnSuccessListener { document ->
+                        val name = document.getString("username").toString()
+                        //get user info
 
 
+                        //open home screen
+                        startActivity(Intent(this, MainActivity::class.java))
+                        Toast.makeText(this, "Welcome, $name", Toast.LENGTH_SHORT).show()
+                    }
+                    .addOnFailureListener {
+                        Toast.makeText(this, "Invalid Email or Password", Toast.LENGTH_SHORT).show()
+                    }
 
-                //open home screen
-                startActivity(Intent(this,MainActivity::class.java))
-                Toast.makeText(this,"LoggedIn as $email", Toast.LENGTH_SHORT).show()
             }
-            .addOnFailureListener {
-                Toast.makeText(this,"Invalid Email or Password", Toast.LENGTH_SHORT).show()
-            }
-
     }
 
 

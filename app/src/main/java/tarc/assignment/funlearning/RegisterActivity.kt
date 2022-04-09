@@ -82,11 +82,10 @@ class RegisterActivity : AppCompatActivity() {
                 val field = hashMapOf(
                     "username" to username,
                     "UID" to uid,
-                    "html_chp1" to null,
-                    "html_chp2" to null,
-                    "html_chp3" to null,
-                    "c_chp1" to null,
-                    "c_chp2" to null,
+                    "html_notes" to null,
+                    "html_exercises" to null,
+                    "c_notes" to null,
+                    "c_exercises" to null,
                 )
 
                 db.collection("user").document(uid).set(field)

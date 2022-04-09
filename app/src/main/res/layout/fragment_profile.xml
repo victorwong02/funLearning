@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_yellow"
     tools:context=".fragments.ProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,10 +13,10 @@
 
         <ImageView
             android:id="@+id/profilepic"
-            android:layout_width="146dp"
-            android:layout_height="146dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="40dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:contentDescription="@string/profile"
             android:src="@drawable/profile_pic"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,10 +26,10 @@
             android:id="@+id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:text="@string/user_name"
-            android:textSize="18sp"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/profilepic"
             app:layout_constraintTop_toTopOf="@+id/profilepic" />
 
@@ -39,10 +38,10 @@
             android:id="@+id/user_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="30dp"
             android:text="@string/user_email"
-            android:textSize="18sp"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/profilepic"
             app:layout_constraintTop_toBottomOf="@+id/user_name" />
 
@@ -51,7 +50,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:backgroundTint="#8BC34A"
+            android:backgroundTint="@color/btn"
             android:text="@string/change_profile_button_text"
             android:textSize="13sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,8 +62,8 @@
             android:id="@+id/logout_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="#8BC34A"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/btn"
             android:text="@string/logout_button_text"
             android:textSize="13sp"
             app:layout_constraintEnd_toEndOf="@+id/edit_profile"
@@ -75,7 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="36dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="35dp"
             android:text="@string/history_title"
             android:textAllCaps="true"
             android:textSize="20sp"
