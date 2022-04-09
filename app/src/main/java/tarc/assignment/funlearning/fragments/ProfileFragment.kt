@@ -31,11 +31,13 @@ class ProfileFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         loadInfo()
+        loadHistory()
     }
 
     override fun onResume() {
         super.onResume()
         loadInfo()
+        loadHistory()
     }
 
     override fun onCreateView(
@@ -60,12 +62,6 @@ class ProfileFragment : Fragment() {
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
         }
-
-        //get history record
-        binding.htmlNotes.text = getString(R.string.html_lastnotes)
-        binding.htmlExercise.text = getString(R.string.html_lastexercise)
-        binding.cNotes.text = getString(R.string.c_lastnotes)
-        binding.cExercise.text = getString(R.string.c_lastexercise)
 
         return view
     }
@@ -96,7 +92,7 @@ class ProfileFragment : Fragment() {
         alert.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(Color.parseColor("#8BC34A"))
     }
 
-    fun loadInfo(){
+    private fun loadInfo(){
         val firebaseUser = firebaseAuth.currentUser
         val uid = firebaseUser!!.uid
 
@@ -107,6 +103,51 @@ class ProfileFragment : Fragment() {
 
                 binding.userName.text = getString(R.string.user_name, name)
                 binding.userEmail.text = getString(R.string.user_email, email)
+
+            }
+    }
+
+    private fun loadHistory(){
+        val firebaseUser = firebaseAuth.currentUser
+        val uid = firebaseUser!!.uid
+
+        val notStarted = "Not Started"
+
+        db.collection("user").document(uid).get()
+            .addOnSuccessListener { document ->
+                val cnotes = document.getString("c_notes").toString()
+                val cexercise  = document.getString("c_exercise").toString()
+
+                val htmlnotes = document.getString("html_notes").toString()
+                val htmlexercise  = document.getString("html_exercise").toString()
+
+                if(cnotes == null){
+                    binding.cNotes.text = getString(R.string.c_lastnotes, notStarted)
+                }
+                else{
+                    binding.cNotes.text = getString(R.string.c_lastnotes, cnotes)
+                }
+
+                if(cexercise == null){
+                    binding.cExercise.text = getString(R.string.c_lastexercise, notStarted)
+                }
+                else{
+                    binding.cExercise.text = getString(R.string.c_lastexercise, cexercise)
+                }
+
+                if(htmlnotes == null){
+                    binding.htmlNotes.text = getString(R.string.html_lastnotes, notStarted)
+                }
+                else{
+                    binding.htmlNotes.text = getString(R.string.html_lastnotes, htmlnotes)
+                }
+
+                if(htmlexercise == null){
+                    binding.htmlExercise.text  = getString(R.string.html_lastexercise, notStarted)
+                }
+                else{
+                    binding.htmlExercise.text  = getString(R.string.html_lastexercise, htmlexercise)
+                }
 
             }
     }
