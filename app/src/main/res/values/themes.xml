@@ -2,11 +2,11 @@
     <!-- Base application theme. -->
     <style name="Theme.FunLearning" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/light_yellow</item>
-        <item name="colorPrimaryVariant">@color/dark_green</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="android:textColorHint">@color/black</item>
-        <item name="android:colorBackground">@color/light_yellow</item>
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorPrimaryVariant">@color/b</item>
+        <item name="colorOnPrimary">@color/e</item>
+        <item name="android:textColorHint">@color/e</item>
+        <item name="android:colorBackground">@color/light_purple</item>
 
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

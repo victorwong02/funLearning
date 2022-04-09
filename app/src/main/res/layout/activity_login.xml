@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/passwordTil"
         android:layout_marginTop="41dp"
-        android:backgroundTint="@color/green"
+        android:backgroundTint="@color/btn"
         android:text="@string/login"
         android:textColor="@color/light_yellow" />
 
