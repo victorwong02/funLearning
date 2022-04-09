@@ -4,18 +4,25 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.RecyclerView
 import tarc.assignment.funlearning.R
-import tarc.assignment.funlearning.model.LangType
-import tarc.assignment.funlearning.LangTypeAdapter
-import tarc.assignment.funlearning.data.Datasource
 
 class HomeFragment : Fragment() {
 
-//    private lateinit var adapter: LangTypeAdapter
-//    val langList: List<LangType> = ArrayList()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+//        // Initialize data.
+//        val myDataset = Datasource().loadChapters()
+//
+//        val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
+//        recyclerView.adapter = RecyclerAdapter(this, myDataset)
+//
+//        // Use this setting to improve performance if you know that changes
+//        // in content do not change the layout size of the RecyclerView
+//        recyclerView.setHasFixedSize(true)
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,10 +30,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         //inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
-
-//        initRecyclerView(view)
-        return view
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
     // To do the functionality in this fragment, etc. make a toast
 
@@ -34,16 +38,5 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-
     }
-
-//    private fun initRecyclerView(view: View){
-//        val recyclerView = view.findViewById<RecyclerView>(R.id.list_language)
-//        recyclerView.layoutManager = LinearLayoutManager(activity)
-//        adapter = LangTypeAdapter(languageList, this)
-//        recyclerView.adapter =
-//
-//    }
-
-
 }
