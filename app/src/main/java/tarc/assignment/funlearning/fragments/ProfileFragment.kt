@@ -8,13 +8,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import tarc.assignment.funlearning.LoginActivity
-import tarc.assignment.funlearning.MainActivity
 import tarc.assignment.funlearning.R
 import tarc.assignment.funlearning.databinding.FragmentProfileBinding
 
@@ -88,8 +86,8 @@ class ProfileFragment : Fragment() {
         val alert : AlertDialog = builder.create()
         alert.show()
 
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(Color.parseColor("#8BC34A"))
-        alert.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(Color.parseColor("#8BC34A"))
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(Color.parseColor("#83677B"))
+        alert.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(Color.parseColor("#83677B"))
     }
 
     private fun loadInfo(){

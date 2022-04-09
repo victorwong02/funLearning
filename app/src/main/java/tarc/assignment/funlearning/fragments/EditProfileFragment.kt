@@ -66,23 +66,22 @@ class EditProfileFragment : Fragment() {
 
         val user = db.collection("user").document(uid)
 
-        if (newName == "null" && newEmail == "null") {
+        if (newName == "" && newEmail == "") {
             Toast.makeText(context, "Nothing Has Been Updated", Toast.LENGTH_SHORT).show()
         }
         else{
-            if (newName == "null"){
+            if (newName == ""){
                 //update email
-                    firebaseAuth
-                user.update("email",newEmail)
+                    firebaseUser!!.updateEmail(newEmail)
             }
-            else if(newEmail == "null"){
+            else if(newEmail == ""){
                 //update name
                 user.update("username",newName)
             }
             else{
                 //update name and email
                 user.update("username",newName)
-                user.update("email",newEmail)
+                firebaseUser!!.updateEmail(newEmail)
             }
             Toast.makeText(context, "Profile Updated", Toast.LENGTH_SHORT).show()
         }
