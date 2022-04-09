@@ -99,12 +99,12 @@ class ProfileFragment : Fragment() {
         db.collection("user").document(uid).get()
             .addOnSuccessListener { document ->
                 val name = document.getString("username").toString()
-                val email = document.getString("email").toString()
+                val email = firebaseUser!!.email
 
                 binding.userName.text = getString(R.string.user_name, name)
                 binding.userEmail.text = getString(R.string.user_email, email)
-
             }
+
     }
 
     private fun loadHistory(){
@@ -116,33 +116,33 @@ class ProfileFragment : Fragment() {
         db.collection("user").document(uid).get()
             .addOnSuccessListener { document ->
                 val cnotes = document.getString("c_notes").toString()
-                val cexercise  = document.getString("c_exercise").toString()
+                val cexercise  = document.getString("c_exercises").toString()
 
                 val htmlnotes = document.getString("html_notes").toString()
-                val htmlexercise  = document.getString("html_exercise").toString()
+                val htmlexercise  = document.getString("html_exercises").toString()
 
-                if(cnotes == null){
+                if(cnotes == "null"){
                     binding.cNotes.text = getString(R.string.c_lastnotes, notStarted)
                 }
                 else{
                     binding.cNotes.text = getString(R.string.c_lastnotes, cnotes)
                 }
 
-                if(cexercise == null){
+                if(cexercise == "null"){
                     binding.cExercise.text = getString(R.string.c_lastexercise, notStarted)
                 }
                 else{
                     binding.cExercise.text = getString(R.string.c_lastexercise, cexercise)
                 }
 
-                if(htmlnotes == null){
+                if(htmlnotes == "null"){
                     binding.htmlNotes.text = getString(R.string.html_lastnotes, notStarted)
                 }
                 else{
                     binding.htmlNotes.text = getString(R.string.html_lastnotes, htmlnotes)
                 }
 
-                if(htmlexercise == null){
+                if(htmlexercise == "null"){
                     binding.htmlExercise.text  = getString(R.string.html_lastexercise, notStarted)
                 }
                 else{
