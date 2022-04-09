@@ -24,7 +24,8 @@
     <color name="b">#64485C</color>
     <color name="c">#501B1D</color>
     <color name="d">#2E1114</color>
-    <color name="e">#ADADAD</color>
+    <color name="e">#000000</color>
+    <color name="f">#ADADAD</color>
 
     <!-- Nav Bar Color Settings -->
     <color name="nav_bar_bg_color">@color/green</color>

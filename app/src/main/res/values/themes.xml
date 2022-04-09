@@ -4,8 +4,10 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple</item>
         <item name="colorPrimaryVariant">@color/b</item>
-        <item name="colorOnPrimary">@color/e</item>
+        <!-- Button Text Color. -->
+        <item name="colorOnPrimary">@color/f</item>
         <item name="android:textColorHint">@color/e</item>
+        <item name="android:textColor">@color/e</item>
         <item name="android:colorBackground">@color/light_purple</item>
 
         <!-- Secondary brand color. -->

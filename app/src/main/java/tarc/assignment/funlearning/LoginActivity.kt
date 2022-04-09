@@ -90,7 +90,7 @@ class LoginActivity : AppCompatActivity() {
 
                         //open home screen
                         startActivity(Intent(this, MainActivity::class.java))
-                        Toast.makeText(this, "Welcome $name", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Welcome, $name", Toast.LENGTH_SHORT).show()
                     }
                     .addOnFailureListener {
                         Toast.makeText(this, "Invalid Email or Password", Toast.LENGTH_SHORT).show()
