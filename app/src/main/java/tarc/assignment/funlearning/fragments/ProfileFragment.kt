@@ -8,9 +8,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import tarc.assignment.funlearning.LoginActivity
+import tarc.assignment.funlearning.MainActivity
 import tarc.assignment.funlearning.R
 import tarc.assignment.funlearning.databinding.FragmentProfileBinding
 
@@ -18,9 +22,21 @@ import tarc.assignment.funlearning.databinding.FragmentProfileBinding
 class ProfileFragment : Fragment() {
 
     private lateinit var firebaseAuth: FirebaseAuth
+    private val db = Firebase.firestore
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
+
+
+    override fun onStart() {
+        super.onStart()
+        loadInfo()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        loadInfo()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,6 +46,7 @@ class ProfileFragment : Fragment() {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val view = binding.root
         firebaseAuth = FirebaseAuth.getInstance()
+
 
         binding.logoutButton.setOnClickListener {
             logoutDialog(it)
@@ -77,6 +94,21 @@ class ProfileFragment : Fragment() {
 
         alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(Color.parseColor("#8BC34A"))
         alert.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(Color.parseColor("#8BC34A"))
+    }
+
+    fun loadInfo(){
+        val firebaseUser = firebaseAuth.currentUser
+        val uid = firebaseUser!!.uid
+
+        db.collection("user").document(uid).get()
+            .addOnSuccessListener { document ->
+                val name = document.getString("username").toString()
+                val email = document.getString("email").toString()
+
+                binding.userName.text = getString(R.string.user_name, name)
+                binding.userEmail.text = getString(R.string.user_email, email)
+
+            }
     }
 
 }
