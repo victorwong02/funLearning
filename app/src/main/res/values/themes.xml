@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.FunLearning" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.FunLearning" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Primary brand color -->
         <item name="colorPrimary">@color/purple</item>
         <item name="colorPrimaryVariant">@color/light_purple</item>
@@ -8,6 +8,8 @@
         <item name="colorOnPrimary">@color/light_yellow</item>
         <item name="android:textColorHint">@color/e</item>
         <item name="android:textColor">@color/e</item>
+
+
 
 
         <!-- Secondary brand color. -->

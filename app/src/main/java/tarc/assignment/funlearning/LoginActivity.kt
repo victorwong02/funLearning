@@ -7,6 +7,7 @@ import android.text.TextUtils
 import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.EventListener
@@ -21,6 +22,7 @@ class LoginActivity : AppCompatActivity() {
     private  lateinit var binding:ActivityLoginBinding
 
 
+
     //init database
     private val db = Firebase.firestore
 
@@ -33,6 +35,8 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        supportActionBar?.hide()
 
         //init firebaseAuth
         firebaseAuth = FirebaseAuth.getInstance()
