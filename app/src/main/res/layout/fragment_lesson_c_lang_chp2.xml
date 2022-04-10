@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="#8BC34A"
-    tools:context=".ExeCLangChp1">
+    tools:context=".LessonCLangChp2Fragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:id="@+id/C_Chap2_Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Chap1Exe"
+            android:text="@string/CChap2Title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:textStyle="bold"/>

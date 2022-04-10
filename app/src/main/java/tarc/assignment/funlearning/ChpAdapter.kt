@@ -1,6 +1,5 @@
 package tarc.assignment.funlearning
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,6 +17,8 @@ class ChpAdapter(private val context: HomeFragment, private val dataset: List<Ch
         val linearLayout: LinearLayout = view.findViewById(R.id.linear_Layout)
         val expandableLayout: RelativeLayout = view.findViewById(R.id.expandable_layout)
         val takeLessonBtn: Button = view.findViewById(R.id.take_lesson_button)
+        val takeExeBtn: Button = view.findViewById(R.id.take_exe_button)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -41,22 +42,13 @@ class ChpAdapter(private val context: HomeFragment, private val dataset: List<Ch
             notifyItemChanged(position)
         }
 
-
         holder.takeLessonBtn.setOnClickListener{
-//            if (position == 0){
-//                Toast.makeText(c,"Lesson 1 is clicked", Toast.LENGTH_SHORT).show()
-//            }else if(position == 1){
-//                Toast.makeText(c,"Lesson 2 is clicked", Toast.LENGTH_SHORT).show()
-//            }else {
-//                Toast.makeText(c,"Coming Soon", Toast.LENGTH_SHORT).show()
-//            }
-
-            listener.onClick()
-
+            listener.onClick(position,"lesson")
         }
 
-
-
+        holder.takeExeBtn.setOnClickListener {
+            listener.onClick(position,"exe")
+        }
     }
 
     override fun getItemCount(): Int {

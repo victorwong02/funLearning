@@ -4,19 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import tarc.assignment.funlearning.ChpAdapter
-import tarc.assignment.funlearning.LessonHTMLChp1
-import tarc.assignment.funlearning.R
+import tarc.assignment.funlearning.*
 import tarc.assignment.funlearning.data.Datasource
 
 class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
 
     }
 
@@ -32,7 +29,6 @@ class HomeFragment : Fragment() {
     }
 
     // To do the functionality in this fragment, etc. make a toast
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -41,8 +37,8 @@ class HomeFragment : Fragment() {
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
         recyclerView.adapter = ChpAdapter(this, myDataset, object:OnItemClickListener{
-            override fun onClick() {
-                changeFragment()
+            override fun onClick(position: Int, lessonOrExe: String) {
+                changeFragment(position, lessonOrExe)
             }
         })
 
@@ -51,16 +47,44 @@ class HomeFragment : Fragment() {
         recyclerView.setHasFixedSize(true)
     }
 
-    fun changeFragment(){
+    fun changeFragment(position: Int, lessonOrExe: String){
         val fragmentManager =  parentFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        val lessonHTMLChp1 = LessonHTMLChp1()
-        fragmentTransaction.replace(R.id.nav_fragment, lessonHTMLChp1)
-//        fragmentTransaction.addToBackStack(null)
-        fragmentTransaction.commit()
+
+        if(lessonOrExe == "lesson"){
+            when (position) {
+                0 -> {
+                    val lessonHTMLChp1 = LessonHTMLChp1Fragment()
+                    fragmentTransaction.replace(R.id.nav_fragment, lessonHTMLChp1)
+                    fragmentTransaction.commit()
+                }
+                1 -> {
+                    val lessonHTMLChp2 = LessonHTMLChp2Fragment()
+                    fragmentTransaction.replace(R.id.nav_fragment, lessonHTMLChp2)
+                    fragmentTransaction.commit()
+                }
+                else -> {
+                    Toast.makeText(context, "Coming Soon", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }else {
+            when (position) {
+                0 -> {
+                    val exeHTMLChp1 = ExeHTMLChp1Fragment()
+                    fragmentTransaction.replace(R.id.nav_fragment, exeHTMLChp1)
+                    fragmentTransaction.commit()
+                }
+                1 -> {
+                    Toast.makeText(context, "Coming Soon", Toast.LENGTH_SHORT).show()
+                }
+                else -> {
+                    Toast.makeText(context, "Coming Soon", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
     }
 }
 
 interface OnItemClickListener{
-    fun onClick()
+    fun onClick(position: Int, lessonOrExe: String)
 }

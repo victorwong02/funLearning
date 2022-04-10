@@ -4,19 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LessonHTMLChp1">
+    tools:context=".LessonHTMLChp1Fragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp">
-
-        <VideoView
-            android:id="@+id/intro_HTML_vid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+        android:paddingTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp">
 
         <TextView
             android:id="@+id/HTML_chap1_title"
@@ -24,8 +19,17 @@
             android:layout_height="wrap_content"
             android:text="@string/htmlChap1Title"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/intro_HTML_vid"
-            app:layout_constraintTop_toBottomOf="@+id/intro_HTML_vid" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <VideoView
+            android:id="@+id/intro_HTML_vid"
+            android:layout_width="380dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/HTML_chap1_title"
+            app:layout_constraintTop_toBottomOf="@+id/HTML_chap1_title"/>
 
         <TextView
             android:id="@+id/HTML_doc_des"
@@ -35,8 +39,8 @@
             android:layout_marginTop="20dp"
             android:text="@string/htmlDocSample"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/HTML_chap1_title"
-            app:layout_constraintTop_toBottomOf="@+id/HTML_chap1_title" />
+            app:layout_constraintStart_toStartOf="@+id/intro_HTML_vid"
+            app:layout_constraintTop_toBottomOf="@+id/intro_HTML_vid" />
 
         <ImageView
             android:id="@+id/HTML_doc_sample_pic"
@@ -166,11 +170,10 @@
 
         <Button
             android:id="@+id/take_html_exe1_button"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:layout_marginBottom="100dp"
-            android:backgroundTint="#8BC34A"
+            android:backgroundTint="@color/btn"
             android:onClick="takeExe1"
             android:text="@string/takeExeButton"
             app:layout_constraintStart_toStartOf="@+id/HTML_image_sample_pic"
@@ -178,23 +181,14 @@
 
         <Button
             android:id="@+id/next_html_chap2_button"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="204dp"
+            android:layout_marginStart="184dp"
             android:layout_marginTop="40dp"
-            android:backgroundTint="#8BC34A"
+            android:backgroundTint="@color/btn"
             android:text="@string/nextChapButton"
-            android:layout_marginBottom="100dp"
             app:layout_constraintStart_toStartOf="@+id/HTML_image_sample_pic"
             app:layout_constraintTop_toBottomOf="@+id/HTML_image_sample_pic" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="testing"
-            app:layout_constraintStart_toStartOf="@+id/next_html_chap2_button"
-            app:layout_constraintTop_toBottomOf="@+id/next_html_chap2_button"/>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

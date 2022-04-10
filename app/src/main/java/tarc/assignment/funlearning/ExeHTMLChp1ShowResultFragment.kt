@@ -15,7 +15,7 @@ import tarc.assignment.funlearning.databinding.ActivityMainBinding
 import tarc.assignment.funlearning.databinding.FragmentEditProfileBinding
 import tarc.assignment.funlearning.databinding.FragmentProfileBinding
 
-class ExeHTMLChp1ShowResult : Fragment() {
+class ExeHTMLChp1ShowResultFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
