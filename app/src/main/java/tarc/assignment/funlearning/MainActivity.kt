@@ -23,14 +23,16 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavView.setupWithNavController(findNavController(R.id.nav_fragment))
 
-        // Initialize data.
-        val myDataset = Datasource().loadChapters()
+//        //Home Fragment
+//        // Initialize data.
+//        val myDataset = Datasource().loadChapters()
+//
+//        val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
+//        recyclerView.adapter = ChpAdapter(this, this, myDataset)
+//
+//        // Use this setting to improve performance if you know that changes
+//        // in content do not change the layout size of the RecyclerView
+//        recyclerView.setHasFixedSize(true)
 
-        val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
-        recyclerView.adapter = ChpAdapter(this, myDataset)
-
-        // Use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
-        recyclerView.setHasFixedSize(true)
     }
 }
