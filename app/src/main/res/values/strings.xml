@@ -107,7 +107,10 @@
     <string name="history_title">History</string>
     <string name="html_language_progress">HTML Language Progress</string>
     <string name="c_language_progress">C Language Progress</string>
-
+    <string name="c_lastexercise">Exercise : %s</string>
+    <string name="c_lastnotes">Notes : %s</string>
+    <string name="html_lastexercise">Exercise : %s</string>
+    <string name="html_lastnotes">Notes : %s</string>
     <string name="profile">Profile Pic</string>
 
     <!--Edit Profile-->
@@ -124,10 +127,7 @@
     <!-- Navigation Bar-->
     <string name="nav_home">Home</string>
     <string name="nav_profile">Profile</string>
-    <string name="c_lastexercise">Exercise : %s</string>
-    <string name="c_lastnotes">Notes : %s</string>
-    <string name="html_lastexercise">Exercise : %s</string>
-    <string name="html_lastnotes">Notes : %s</string>
+
     <string name="username">Username</string>
 
 

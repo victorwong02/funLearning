@@ -1,30 +1,22 @@
 package tarc.assignment.funlearning.fragments
 
-import android.app.Activity
+
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
-import android.net.Uri
-import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.content.PermissionChecker.checkSelfPermission
+import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.StorageReference
-import tarc.assignment.funlearning.ForgetPasswordActivity
-import tarc.assignment.funlearning.R
+import tarc.assignment.funlearning.*
 import tarc.assignment.funlearning.databinding.FragmentEditProfileBinding
 import java.io.File
-import java.util.jar.Manifest
+
 
 class EditProfileFragment : Fragment() {
 
@@ -34,23 +26,42 @@ class EditProfileFragment : Fragment() {
     private var _binding: FragmentEditProfileBinding? = null
     private val binding get() = _binding!!
 
-    private val PICK_IMAGE_REQUEST = 71
-    private var filePath: Uri? = null
-    private var firebaseStore: FirebaseStorage? = null
-    private var storageReference: StorageReference? = null
 
+    override fun onStart() {
+        super.onStart()
+
+        val firebaseUser = firebaseAuth.currentUser
+        val uid = firebaseUser!!.uid
+
+        db.collection("user").document(uid).get()
+            .addOnSuccessListener { document ->
+                val picname = document.getString("profile_pic").toString()
+
+                val storageref = FirebaseStorage.getInstance().reference.child("images/$picname.jpg")
+
+                val currentpic = File.createTempFile("profile pic","jpg")
+                storageref.getFile(currentpic).addOnSuccessListener{
+
+                    val bitmap = BitmapFactory.decodeFile("$picname.jpg")
+                    binding.profilePic.setImageBitmap(bitmap)
+
+                }
+            }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        firebaseStore = FirebaseStorage.getInstance()
-        storageReference = FirebaseStorage.getInstance().reference
 
         _binding = FragmentEditProfileBinding.inflate(inflater, container, false)
 
         firebaseAuth = FirebaseAuth.getInstance()
+
+        binding.profilePic.setOnClickListener{
+
+        }
 
         binding.saveInfo.setOnClickListener{
             editProfile()
@@ -64,10 +75,6 @@ class EditProfileFragment : Fragment() {
 
         }
 
-        binding.editPic.setOnClickListener{
-
-        }
-
         binding.changePswd.setOnClickListener{
             startActivity(Intent(context, ForgetPasswordActivity::class.java))
         }
@@ -75,6 +82,7 @@ class EditProfileFragment : Fragment() {
         val view = binding.root
         return view
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -98,15 +106,6 @@ class EditProfileFragment : Fragment() {
         }
     }
 
-    private fun uploadPic() {
-        //pick an image
-        val intent = Intent()
-        intent.type = "image/*"
-        intent.action = Intent.ACTION_GET_CONTENT
-        
-
-    }
 
 
 }
-

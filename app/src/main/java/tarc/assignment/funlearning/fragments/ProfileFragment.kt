@@ -9,7 +9,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
@@ -158,17 +157,23 @@ class ProfileFragment : Fragment() {
 
     private fun loadprofilepic(){
         val firebaseUser = firebaseAuth.currentUser
-        val picname = firebaseUser!!.uid
+        val uid = firebaseUser!!.uid
 
-        val storageref = FirebaseStorage.getInstance().reference.child("images/$picname.jpg")
+        db.collection("user").document(uid).get()
+            .addOnSuccessListener { document ->
+                val picname = document.getString("profile_pic").toString()
 
-        val currentpic = File.createTempFile("profile pic","jpg")
-        storageref.getFile(currentpic).addOnSuccessListener{
+                val storageref = FirebaseStorage.getInstance().reference.child("images/$picname.jpg")
 
-            val bitmap = BitmapFactory.decodeFile("$picname.jpg")
-            binding.profilepic.setImageBitmap(bitmap)
+                val currentpic = File.createTempFile("profile pic","jpg")
+                storageref.getFile(currentpic).addOnSuccessListener{
 
-        }
+                    val bitmap = BitmapFactory.decodeFile("$picname.jpg")
+                    binding.profilepic.setImageBitmap(bitmap)
+
+                }
+            }
+
     }
 
 }
