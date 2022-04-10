@@ -21,7 +21,7 @@ class LessonHTMLChp1 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         //inflate the layout for this fragment
-        val v = inflater.inflate(R.layout.fragment_home, container, false)
+        val v = inflater.inflate(R.layout.lesson_html_chp1, container, false)
 
 
 

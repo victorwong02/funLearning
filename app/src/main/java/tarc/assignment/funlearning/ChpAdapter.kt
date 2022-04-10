@@ -5,13 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import tarc.assignment.funlearning.fragments.HomeFragment
+import tarc.assignment.funlearning.fragments.OnItemClickListener
 import tarc.assignment.funlearning.model.ChpModel
 
-class ChpAdapter(private val context: HomeFragment, private val dataset: List<ChpModel>): RecyclerView.Adapter<ChpAdapter.ItemViewHolder>() {
+class ChpAdapter(private val context: HomeFragment, private val dataset: List<ChpModel>, var listener: OnItemClickListener): RecyclerView.Adapter<ChpAdapter.ItemViewHolder>() {
 
     class ItemViewHolder(private val view: View): RecyclerView.ViewHolder(view){
         val htmlChap: TextView = view.findViewById(R.id.lang_name)
@@ -42,6 +41,7 @@ class ChpAdapter(private val context: HomeFragment, private val dataset: List<Ch
             notifyItemChanged(position)
         }
 
+
         holder.takeLessonBtn.setOnClickListener{
 //            if (position == 0){
 //                Toast.makeText(c,"Lesson 1 is clicked", Toast.LENGTH_SHORT).show()
@@ -51,12 +51,7 @@ class ChpAdapter(private val context: HomeFragment, private val dataset: List<Ch
 //                Toast.makeText(c,"Coming Soon", Toast.LENGTH_SHORT).show()
 //            }
 
-            val fragmentManager =  parentFragmentManager
-            val fragmentTransaction = fragmentManager.beginTransaction()
-            val lessonHTMLChp1 = LessonHTMLChp1()
-            fragmentTransaction.replace(R.id.nav_fragment, lessonHTMLChp1)
-            fragmentTransaction.addToBackStack(null)
-            fragmentTransaction.commit()
+            listener.onClick()
 
         }
 

@@ -169,6 +169,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:layout_marginBottom="100dp"
             android:backgroundTint="#8BC34A"
             android:onClick="takeExe1"
             android:text="@string/takeExeButton"
@@ -183,8 +184,16 @@
             android:layout_marginTop="40dp"
             android:backgroundTint="#8BC34A"
             android:text="@string/nextChapButton"
+            android:layout_marginBottom="100dp"
             app:layout_constraintStart_toStartOf="@+id/HTML_image_sample_pic"
             app:layout_constraintTop_toBottomOf="@+id/HTML_image_sample_pic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="testing"
+            app:layout_constraintStart_toStartOf="@+id/next_html_chap2_button"
+            app:layout_constraintTop_toBottomOf="@+id/next_html_chap2_button"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
