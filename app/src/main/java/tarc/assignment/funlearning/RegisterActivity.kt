@@ -86,6 +86,8 @@ class RegisterActivity : AppCompatActivity() {
                     "html_exercises" to null,
                     "c_notes" to null,
                     "c_exercises" to null,
+                    "profile_pic" to null,
+                    "gender" to null
                 )
 
                 db.collection("user").document(uid).set(field)
