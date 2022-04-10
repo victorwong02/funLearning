@@ -3,18 +3,22 @@ package tarc.assignment.funlearning.fragments
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
 import tarc.assignment.funlearning.LoginActivity
 import tarc.assignment.funlearning.R
 import tarc.assignment.funlearning.databinding.FragmentProfileBinding
+import java.io.File
 
 
 class ProfileFragment : Fragment() {
@@ -28,12 +32,14 @@ class ProfileFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+        loadprofilepic()
         loadInfo()
         loadHistory()
     }
 
     override fun onResume() {
         super.onResume()
+        loadprofilepic()
         loadInfo()
         loadHistory()
     }
@@ -148,6 +154,21 @@ class ProfileFragment : Fragment() {
                 }
 
             }
+    }
+
+    private fun loadprofilepic(){
+        val firebaseUser = firebaseAuth.currentUser
+        val picname = firebaseUser!!.uid
+
+        val storageref = FirebaseStorage.getInstance().reference.child("images/$picname.jpg")
+
+        val currentpic = File.createTempFile("profile pic","jpg")
+        storageref.getFile(currentpic).addOnSuccessListener{
+
+            val bitmap = BitmapFactory.decodeFile("$picname.jpg")
+            binding.profilepic.setImageBitmap(bitmap)
+
+        }
     }
 
 }
