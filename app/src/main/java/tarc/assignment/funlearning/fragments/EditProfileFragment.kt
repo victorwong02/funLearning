@@ -60,7 +60,12 @@ class EditProfileFragment : Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.profilePic.setOnClickListener{
-
+            val fragmentManager =  parentFragmentManager
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            val fragmenteditavatar = EditAvatarFragment()
+            fragmentTransaction.replace(R.id.nav_fragment, fragmenteditavatar)
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
         }
 
         binding.saveInfo.setOnClickListener{

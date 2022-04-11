@@ -165,7 +165,7 @@ class ProfileFragment : Fragment() {
 
                 val storageref = FirebaseStorage.getInstance().reference.child("images/$picname.jpg")
 
-                val currentpic = File.createTempFile("profile pic","jpg")
+                val currentpic = File.createTempFile("$picname","jpg")
                 storageref.getFile(currentpic).addOnSuccessListener{
 
                     val bitmap = BitmapFactory.decodeFile("$picname.jpg")
