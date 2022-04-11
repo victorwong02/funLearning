@@ -2,7 +2,6 @@ package tarc.assignment.funlearning.fragments
 
 
 import android.content.Intent
-import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,10 +11,8 @@ import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.FirebaseStorage
 import tarc.assignment.funlearning.*
 import tarc.assignment.funlearning.databinding.FragmentEditProfileBinding
-import java.io.File
 
 
 class EditProfileFragment : Fragment() {
@@ -29,24 +26,12 @@ class EditProfileFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+        loadAvatar()
+    }
 
-        val firebaseUser = firebaseAuth.currentUser
-        val uid = firebaseUser!!.uid
-
-        db.collection("user").document(uid).get()
-            .addOnSuccessListener { document ->
-                val picname = document.getString("profile_pic").toString()
-
-                val storageref = FirebaseStorage.getInstance().reference.child("images/$picname.jpg")
-
-                val currentpic = File.createTempFile("profile pic","jpg")
-                storageref.getFile(currentpic).addOnSuccessListener{
-
-                    val bitmap = BitmapFactory.decodeFile("$picname.jpg")
-                    binding.profilePic.setImageBitmap(bitmap)
-
-                }
-            }
+    override fun onResume() {
+        super.onResume()
+        loadAvatar()
     }
 
     override fun onCreateView(
@@ -58,6 +43,7 @@ class EditProfileFragment : Fragment() {
         _binding = FragmentEditProfileBinding.inflate(inflater, container, false)
 
         firebaseAuth = FirebaseAuth.getInstance()
+
 
         binding.profilePic.setOnClickListener{
             val fragmentManager =  parentFragmentManager
@@ -103,14 +89,30 @@ class EditProfileFragment : Fragment() {
         val user = db.collection("user").document(uid)
 
         if (newName == "") {
-            Toast.makeText(context, "Nothing Has Been Updated", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Username not Updated", Toast.LENGTH_SHORT).show()
         }
         else{
             user.update("username",newName)
-            Toast.makeText(context, "Profile Updated", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Username Updated", Toast.LENGTH_SHORT).show()
         }
     }
 
+    private fun loadAvatar() {
+        val firebaseUser = firebaseAuth.currentUser
+        val uid = firebaseUser!!.uid
 
+        db.collection("user").document(uid).get()
+            .addOnSuccessListener { document ->
+                val picname = document.getString("profile_pic").toString()
+
+                when(picname){
+                    "avatar1" -> binding.profilePic.setImageDrawable(resources.getDrawable(R.drawable.avatar1))
+                    "avatar2" -> binding.profilePic.setImageDrawable(resources.getDrawable(R.drawable.avatar2))
+                    "avatar3" -> binding.profilePic.setImageDrawable(resources.getDrawable(R.drawable.avatar3))
+                    else -> binding.profilePic.setImageDrawable(resources.getDrawable(R.drawable.profile_pic))
+                }
+
+            }
+    }
 
 }

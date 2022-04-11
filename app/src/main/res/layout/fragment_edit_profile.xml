@@ -69,7 +69,8 @@
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_menu_edit"
             app:layout_constraintEnd_toEndOf="@+id/profile_pic"
-            app:layout_constraintTop_toTopOf="@+id/profile_pic" />
+            app:layout_constraintTop_toTopOf="@+id/profile_pic"
+            android:contentDescription="@string/edit_icon" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

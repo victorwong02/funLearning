@@ -3,7 +3,6 @@ package tarc.assignment.funlearning.fragments
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
-import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,11 +12,9 @@ import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.FirebaseStorage
 import tarc.assignment.funlearning.LoginActivity
 import tarc.assignment.funlearning.R
 import tarc.assignment.funlearning.databinding.FragmentProfileBinding
-import java.io.File
 
 
 class ProfileFragment : Fragment() {
@@ -31,14 +28,14 @@ class ProfileFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        loadprofilepic()
+        loadavatar()
         loadInfo()
         loadHistory()
     }
 
     override fun onResume() {
         super.onResume()
-        loadprofilepic()
+        loadavatar()
         loadInfo()
         loadHistory()
     }
@@ -102,7 +99,7 @@ class ProfileFragment : Fragment() {
         db.collection("user").document(uid).get()
             .addOnSuccessListener { document ->
                 val name = document.getString("username").toString()
-                val email = firebaseUser!!.email
+                val email = firebaseUser.email
 
                 binding.userName.text = getString(R.string.user_name, name)
                 binding.userEmail.text = getString(R.string.user_email, email)
@@ -155,7 +152,7 @@ class ProfileFragment : Fragment() {
             }
     }
 
-    private fun loadprofilepic(){
+    private fun loadavatar(){
         val firebaseUser = firebaseAuth.currentUser
         val uid = firebaseUser!!.uid
 
@@ -163,17 +160,14 @@ class ProfileFragment : Fragment() {
             .addOnSuccessListener { document ->
                 val picname = document.getString("profile_pic").toString()
 
-                val storageref = FirebaseStorage.getInstance().reference.child("images/$picname.jpg")
-
-                val currentpic = File.createTempFile("profile pic","jpg")
-                storageref.getFile(currentpic).addOnSuccessListener{
-
-                    val bitmap = BitmapFactory.decodeFile("$picname.jpg")
-                    binding.profilepic.setImageBitmap(bitmap)
-
+                when(picname){
+                    "avatar1" -> binding.profilepic.setImageDrawable(resources.getDrawable(R.drawable.avatar1))
+                    "avatar2" -> binding.profilepic.setImageDrawable(resources.getDrawable(R.drawable.avatar2))
+                    "avatar3" -> binding.profilepic.setImageDrawable(resources.getDrawable(R.drawable.avatar3))
+                    else -> binding.profilepic.setImageDrawable(resources.getDrawable(R.drawable.profile_pic))
                 }
-            }
 
+            }
     }
 
 }

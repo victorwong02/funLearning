@@ -5,13 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RadioGroup
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import tarc.assignment.funlearning.R
 import tarc.assignment.funlearning.databinding.FragmentEditAvatarBinding
-import tarc.assignment.funlearning.databinding.FragmentEditProfileBinding
 
 class EditAvatarFragment : Fragment() {
 
@@ -32,13 +31,15 @@ class EditAvatarFragment : Fragment() {
 
 
         binding.selectBtn.setOnClickListener{
-            val avatarName = binding.avatarRadio.checkedRadioButtonId.toString()
 
-            var avatar = when(avatarName){
-                "avatar1" -> "avatar1"
-                "avatar2" -> "avatar2"
-                "avatar3" -> "avatar3"
-                else -> "profile_pic"
+            val avatar = if(binding.avatar1.isChecked){
+                "avatar1"
+            } else if (binding.avatar2.isChecked){
+                "avatar2"
+            } else if(binding.avatar3.isChecked){
+                "avatar3"
+            } else{
+                "profile_pic"
             }
 
             changeAvatar(avatar)
@@ -52,15 +53,6 @@ class EditAvatarFragment : Fragment() {
 
         }
 
-        binding.cancleBtn.setOnClickListener{
-            val fragmentManager =  parentFragmentManager
-            val fragmentTransaction = fragmentManager.beginTransaction()
-            val fragmenteditprofile = EditProfileFragment()
-            fragmentTransaction.replace(R.id.nav_fragment, fragmenteditprofile)
-            fragmentTransaction.addToBackStack(null)
-            fragmentTransaction.commit()
-        }
-
         val view = binding.root
         return view
     }
@@ -69,7 +61,9 @@ class EditAvatarFragment : Fragment() {
         val firebaseUser = firebaseAuth.currentUser
         val uid = firebaseUser!!.uid
 
-        db.collection("user").document(uid).update("profile_pic",avatar)
+        val user = db.collection("user").document(uid)
+        user.update("profile_pic",avatar)
+        Toast.makeText(context,"Avatar Updated",Toast.LENGTH_SHORT).show()
 
     }
 

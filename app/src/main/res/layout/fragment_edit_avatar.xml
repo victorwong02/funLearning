@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Choose New Avatar :"
+            android:text="@string/choose_new_avatar"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -46,7 +46,7 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="20dp"
                 android:button="@drawable/ic_avatar2"
-                android:background="@drawable/profile_pic"/>
+                android:background="@drawable/profile_pic" />
 
             <RadioButton
                 android:id="@+id/avatar3"
@@ -54,7 +54,7 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="20dp"
                 android:button="@drawable/ic_avatar3"
-                android:background="@drawable/profile_pic"/>
+                android:background="@drawable/profile_pic" />
 
         </RadioGroup>
 
@@ -64,20 +64,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
-            android:text="SELECT"
+            android:text="@string/select"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/avatar_radio" />
-
-        <Button
-            android:id="@+id/cancle_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:text="CANCEL"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/avatar_radio" />
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

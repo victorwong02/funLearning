@@ -128,6 +128,9 @@
     <string name="nav_profile">Profile</string>
 
     <string name="username">Username</string>
+    <string name="choose_new_avatar">Choose New Avatar :</string>
+    <string name="select">SELECT</string>
+    <string name="edit_icon">edit icon</string>
 
 
 </resources>
