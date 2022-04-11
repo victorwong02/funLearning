@@ -27,34 +27,34 @@
             android:id="@+id/avatar_radio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editavatar_title">
+            app:layout_constraintTop_toTopOf="parent">
 
             <RadioButton
                 android:id="@+id/avatar1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="20dp"
-                android:button="@drawable/ic_avatar1"
-                android:background="@drawable/profile_pic" />
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/profile_pic"
+                android:button="@drawable/ic_avatar1" />
 
             <RadioButton
                 android:id="@+id/avatar2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="20dp"
-                android:button="@drawable/ic_avatar2"
-                android:background="@drawable/profile_pic" />
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/profile_pic"
+                android:button="@drawable/ic_avatar2" />
 
             <RadioButton
                 android:id="@+id/avatar3"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="20dp"
-                android:button="@drawable/ic_avatar3"
-                android:background="@drawable/profile_pic" />
+                android:background="@drawable/profile_pic"
+                android:button="@drawable/ic_avatar3" />
 
         </RadioGroup>
 
@@ -62,11 +62,10 @@
             android:id="@+id/select_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="8dp"
             android:text="@string/select"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/avatar_radio" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
