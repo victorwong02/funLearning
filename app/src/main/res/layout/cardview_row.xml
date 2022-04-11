@@ -41,25 +41,23 @@
                 android:padding="20dp"/>
 
             <Button
-                android:id="@+id/take_lesson_button"
+                android:id="@+id/take_exe_button"
                 android:layout_margin="15dp"
-                android:layout_width="wrap_content"
+                android:layout_width="148dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lang_des"
                 android:text="Take Exercise"
-                android:textColor="@color/dark_grey"
-                android:backgroundTint="@color/light_green"/>
+                android:backgroundTint="@color/btn"/>
 
             <Button
-                android:id="@+id/take_exe_button"
+                android:id="@+id/take_lesson_button"
                 android:layout_margin="15dp"
-                android:layout_width="wrap_content"
+                android:layout_width="148dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lang_des"
                 android:layout_alignParentEnd="true"
-                android:text="Next Chapter"
-                android:textColor="@color/dark_grey"
-                android:backgroundTint="@color/light_green"/>
+                android:text="Take Lesson"
+                android:backgroundTint="@color/btn"/>
 
         </RelativeLayout>
 
