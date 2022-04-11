@@ -118,6 +118,10 @@
     <string name="save_button_text">Save</string>
     <string name="change_password_button">Change Password</string>
 
+    <!--Edit Avatar-->
+    <string name="choose_new_avatar">Choose New Avatar :</string>
+    <string name="select">SELECT</string>
+    <string name="edit_icon">edit icon</string>
 
     <string name="forgot_password">Forgot Password</string>
     <string name="submit">Submit</string>
@@ -126,11 +130,8 @@
     <!-- Navigation Bar-->
     <string name="nav_home">Home</string>
     <string name="nav_profile">Profile</string>
-
     <string name="username">Username</string>
-    <string name="choose_new_avatar">Choose New Avatar :</string>
-    <string name="select">SELECT</string>
-    <string name="edit_icon">edit icon</string>
+
 
 
 </resources>
