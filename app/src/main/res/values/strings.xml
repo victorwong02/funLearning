@@ -88,13 +88,18 @@
     <string name="CChap1WhyLearnCDes">It is one of the most popular programming language in the world\n\nIf you know C, you will have no problem to learn other popular programming languages such as Java, Python, C++, C#, etc, as the syntax is similar\n\nC is very fast, compared to other programming languages, like Java and Python\n\nC is very versatile; it can be used in both applications and technologies</string>
     <!--Chapter 2-->
     <string name="CChap2Title">Chapter 2</string>
-    <!--Home-->
+    <!--Home (HTML)-->
     <string name="html_chap1">Chapter 1 : Introduction to HTML</string>
     <string name="html_chap1_des">This chapter will show some of the tags that is important for HTML.</string>
     <string name="html_chap2">Chapter 2 : HTML Attributes</string>
     <string name="html_chap2_des">HTML attributes provide additional information about HTML elements.</string>
     <string name="html_chap3">Chapter 3</string>
     <string name="html_chap3_des">Coming Soon...</string>
+    <!--Home (C)-->
+    <string name="c_chap1">Chapter 1 : Introduction to C Language</string>
+    <string name="c_chap1_des">This chapter will show a brief description of the C language.</string>
+    <string name="c_chap2">Chapter 2</string>
+    <string name="c_chap2_des">Coming Soon...</string>
 
 
     <!--Hui Yi's string-->

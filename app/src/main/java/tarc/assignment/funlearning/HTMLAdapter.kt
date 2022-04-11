@@ -5,11 +5,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
+import tarc.assignment.funlearning.fragments.HTMLHomeFragment
 import tarc.assignment.funlearning.fragments.HomeFragment
 import tarc.assignment.funlearning.fragments.OnItemClickListener
 import tarc.assignment.funlearning.model.ChpModel
 
-class ChpAdapter(private val context: HomeFragment, private val dataset: List<ChpModel>, var listener: OnItemClickListener): RecyclerView.Adapter<ChpAdapter.ItemViewHolder>() {
+class HTMLAdapter(private val context: HomeFragment, private val dataset: List<ChpModel>, var listener: OnItemClickListener): RecyclerView.Adapter<HTMLAdapter.ItemViewHolder>() {
 
     class ItemViewHolder(private val view: View): RecyclerView.ViewHolder(view){
         val htmlChap: TextView = view.findViewById(R.id.lang_name)
@@ -34,6 +35,7 @@ class ChpAdapter(private val context: HomeFragment, private val dataset: List<Ch
         holder.htmlChap.text = context.resources.getString(item.chapName)
         holder.htmlChapDes.text = context.resources.getString(item.chapDes)
 
+        //expandable cardview
         val isExpandable : Boolean = dataset[position].visibility
         holder.expandableLayout.visibility = if (isExpandable) View.VISIBLE else View.GONE
 

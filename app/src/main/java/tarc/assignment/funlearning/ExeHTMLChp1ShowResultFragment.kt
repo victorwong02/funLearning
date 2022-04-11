@@ -6,10 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.ListAdapter
-import android.widget.ListView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import tarc.assignment.funlearning.databinding.ActivityMainBinding
 import tarc.assignment.funlearning.databinding.FragmentEditProfileBinding
@@ -17,13 +14,20 @@ import tarc.assignment.funlearning.databinding.FragmentProfileBinding
 
 class ExeHTMLChp1ShowResultFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        //inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.fragment_exercise_html_chp1_showresult, container, false)
 
-
+        return view
     }
 
-    private fun numOfCorrectQues() {
+    // To do the functionality in this fragment, etc. make a toast
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
     }
 }

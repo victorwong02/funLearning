@@ -13,15 +13,10 @@ import com.google.firebase.ktx.Firebase
 import tarc.assignment.funlearning.*
 import tarc.assignment.funlearning.data.Datasource
 
-class HomeFragment : Fragment() {
+class HTMLHomeFragment : Fragment() {
 
     private lateinit var firebaseAuth: FirebaseAuth
     private val db = Firebase.firestore
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,19 +33,19 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Initialize data.
-        val myDataset = Datasource().loadHtml()
-
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
-        recyclerView.adapter = HTMLAdapter(this, myDataset, object:OnItemClickListener{
-            override fun onClick(position: Int, lessonOrExe: String) {
-                changeFragment(position, lessonOrExe)
-            }
-        })
-
-        // Use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
-        recyclerView.setHasFixedSize(true)
+//        // Initialize data.
+//        val myDataset = Datasource().loadHtml()
+//
+//        val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
+//        recyclerView.adapter = HTMLAdapter(this, myDataset, object:OnItemClickListener{
+//            override fun onClick(position: Int, lessonOrExe: String) {
+//                changeFragment(position, lessonOrExe)
+//            }
+//        })
+//
+//        // Use this setting to improve performance if you know that changes
+//        // in content do not change the layout size of the RecyclerView
+//        recyclerView.setHasFixedSize(true)
     }
 
     fun changeFragment(position: Int, lessonOrExe: String){
@@ -130,8 +125,4 @@ class HomeFragment : Fragment() {
             }
         }
     }
-}
-
-interface OnItemClickListener{
-    fun onClick(position: Int, lessonOrExe: String)
 }
