@@ -4,10 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.*
 import androidx.fragment.app.Fragment
+import tarc.assignment.funlearning.databinding.FragmentExerciseHtmlChp1Binding
 
 class ExeHTMLChp1Fragment : Fragment() {
+
+    private var _binding: FragmentExerciseHtmlChp1Binding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -15,16 +19,52 @@ class ExeHTMLChp1Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         //inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_exercise_html_chp1, container, false)
-
+        _binding = FragmentExerciseHtmlChp1Binding.inflate(inflater, container, false)
+        val view = binding.root
         val showResult = view.findViewById<Button>(R.id.HTML_Chap1_Exe_ShowResult)
         showResult.setOnClickListener {
-            val fragmentManager =  parentFragmentManager
-            val fragmentTransaction = fragmentManager.beginTransaction()
-            val fragmentshowResult = ExeHTMLChp1ShowResultFragment()
-            fragmentTransaction.replace(R.id.nav_fragment, fragmentshowResult)
-            fragmentTransaction.addToBackStack(null)
-            fragmentTransaction.commit()
+
+            var numOfCorrectQues = 0
+
+            val empty = checkEmpty()
+
+            if(empty == 0){
+                if(binding.HTMLChap1ExeQ1Opt1.isChecked){
+                    numOfCorrectQues++
+                }
+
+                if(binding.HTMLChap1ExeQ2Input.text.toString() == "6"){
+                    numOfCorrectQues++
+                }
+
+                if(binding.HTMLChap1ExeQ3Choose2.isChecked && binding.HTMLChap1ExeQ3Choose3.isChecked){
+                    numOfCorrectQues++
+                }
+
+                if(binding.HTMLChap1ExeQ4Opt2.isChecked){
+                    numOfCorrectQues++
+                }
+
+                if(binding.HTMLChap1ExeQ5Opt1.isChecked){
+                    numOfCorrectQues++
+                }
+
+                val bundle = Bundle()
+                bundle.putString("num", numOfCorrectQues.toString())
+                var percentage = (numOfCorrectQues.toDouble()/5.0)*100.0
+                bundle.putString("percent", percentage.toInt().toString())
+
+                //Switch Fragment to show result fragment
+                val fragmentManager =  parentFragmentManager
+                val fragmentTransaction = fragmentManager.beginTransaction()
+                val fragmentshowResult = ExeHTMLChp1ShowResultFragment()
+                fragmentshowResult.arguments = bundle
+                fragmentTransaction.replace(R.id.nav_fragment, fragmentshowResult)
+                fragmentTransaction.setReorderingAllowed(true)
+                fragmentTransaction.commit()
+            }
+
+
         }
 
         return view
@@ -35,4 +75,41 @@ class ExeHTMLChp1Fragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
     }
+
+    fun checkEmpty(): Int {
+        var empty = 0
+
+        //check q1
+        if(!(binding.HTMLChap1ExeQ1Opt1.isChecked || binding.HTMLChap1ExeQ1Opt2.isChecked || binding.HTMLChap1ExeQ1Opt3.isChecked)){
+            empty++
+        }
+
+        //check q2
+        if(binding.HTMLChap1ExeQ2Input.text.toString() == ""){
+            empty++
+        }
+
+        //check q3
+        if(!(binding.HTMLChap1ExeQ3Choose1.isChecked || binding.HTMLChap1ExeQ3Choose2.isChecked || binding.HTMLChap1ExeQ3Choose3.isChecked || binding.HTMLChap1ExeQ3Choose4.isChecked)){
+            empty++
+        }
+
+        //check q4
+        if(!(binding.HTMLChap1ExeQ4Opt1.isChecked || binding.HTMLChap1ExeQ4Opt2.isChecked || binding.HTMLChap1ExeQ4Opt3.isChecked)){
+            empty++
+        }
+
+        //check q5
+        if(!(binding.HTMLChap1ExeQ5Opt1.isChecked || binding.HTMLChap1ExeQ5Opt2.isChecked || binding.HTMLChap1ExeQ5Opt3.isChecked)){
+            empty++
+        }
+
+        if(empty != 0){
+            Toast.makeText(context, "Please complete all the questions!", Toast.LENGTH_SHORT).show()
+        }
+
+
+        return empty
+    }
+
 }

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
@@ -37,7 +38,7 @@ class HTMLHomeFragment : Fragment() {
 //        val myDataset = Datasource().loadHtml()
 //
 //        val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
-//        recyclerView.adapter = HTMLAdapter(this, myDataset, object:OnItemClickListener{
+//        recyclerView.adapter = HTMLAdapter(this, myDataset, object: AdapterView.OnItemClickListener {
 //            override fun onClick(position: Int, lessonOrExe: String) {
 //                changeFragment(position, lessonOrExe)
 //            }
@@ -75,6 +76,7 @@ class HTMLHomeFragment : Fragment() {
                     }
                     val lessonHTMLChp1 = LessonHTMLChp1Fragment()
                     fragmentTransaction.replace(R.id.nav_fragment, lessonHTMLChp1)
+                    fragmentTransaction.setReorderingAllowed(true)
                     fragmentTransaction.commit()
                 }
                 1 -> {
@@ -93,6 +95,7 @@ class HTMLHomeFragment : Fragment() {
                     }
                     val lessonHTMLChp2 = LessonHTMLChp2Fragment()
                     fragmentTransaction.replace(R.id.nav_fragment, lessonHTMLChp2)
+                    fragmentTransaction.setReorderingAllowed(true)
                     fragmentTransaction.commit()
                 }
                 else -> {
@@ -117,6 +120,7 @@ class HTMLHomeFragment : Fragment() {
                     }
                     val exeHTMLChp1 = ExeHTMLChp1Fragment()
                     fragmentTransaction.replace(R.id.nav_fragment, exeHTMLChp1)
+                    fragmentTransaction.setReorderingAllowed(true)
                     fragmentTransaction.commit()
                 }
                 else -> {
@@ -126,3 +130,4 @@ class HTMLHomeFragment : Fragment() {
         }
     }
 }
+

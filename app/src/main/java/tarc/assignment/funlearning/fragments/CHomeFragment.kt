@@ -77,6 +77,7 @@ class CHomeFragment: Fragment() {
                     }
                     val lessonCchp1 = LessonCLangChp1Fragment()
                     fragmentTransaction.replace(R.id.nav_fragment, lessonCchp1)
+                    fragmentTransaction.setReorderingAllowed(true)
                     fragmentTransaction.commit()
                 }
                 else -> {

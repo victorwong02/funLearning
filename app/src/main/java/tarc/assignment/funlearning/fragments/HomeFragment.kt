@@ -80,6 +80,7 @@ class HomeFragment : Fragment() {
                     }
                     val lessonHTMLChp1 = LessonHTMLChp1Fragment()
                     fragmentTransaction.replace(R.id.nav_fragment, lessonHTMLChp1)
+                    fragmentTransaction.setReorderingAllowed(true)
                     fragmentTransaction.commit()
                 }
                 1 -> {
@@ -98,6 +99,7 @@ class HomeFragment : Fragment() {
                     }
                     val lessonHTMLChp2 = LessonHTMLChp2Fragment()
                     fragmentTransaction.replace(R.id.nav_fragment, lessonHTMLChp2)
+                    fragmentTransaction.setReorderingAllowed(true)
                     fragmentTransaction.commit()
                 }
                 else -> {
@@ -122,6 +124,7 @@ class HomeFragment : Fragment() {
                     }
                     val exeHTMLChp1 = ExeHTMLChp1Fragment()
                     fragmentTransaction.replace(R.id.nav_fragment, exeHTMLChp1)
+                    fragmentTransaction.setReorderingAllowed(true)
                     fragmentTransaction.commit()
                 }
                 else -> {
