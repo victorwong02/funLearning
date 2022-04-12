@@ -16,8 +16,6 @@ class LoginActivity : AppCompatActivity() {
     //view binding
     private  lateinit var binding:ActivityLoginBinding
 
-
-
     //init database
     private val db = Firebase.firestore
 
