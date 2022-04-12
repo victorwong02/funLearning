@@ -51,6 +51,7 @@ class EditProfileFragment : Fragment() {
             val fragmentTransaction = fragmentManager.beginTransaction()
             val fragmenteditavatar = EditAvatarFragment()
             fragmentTransaction.replace(R.id.nav_fragment, fragmenteditavatar)
+            fragmentTransaction.setReorderingAllowed(true)
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
         }
@@ -62,6 +63,7 @@ class EditProfileFragment : Fragment() {
             val fragmentTransaction = fragmentManager.beginTransaction()
             val fragmentprofile = ProfileFragment()
             fragmentTransaction.replace(R.id.nav_fragment, fragmentprofile)
+            fragmentTransaction.setReorderingAllowed(true)
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
 

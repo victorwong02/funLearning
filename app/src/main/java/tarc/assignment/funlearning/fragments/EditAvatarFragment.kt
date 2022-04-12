@@ -48,6 +48,7 @@ class EditAvatarFragment : Fragment() {
             val fragmentTransaction = fragmentManager.beginTransaction()
             val fragmenteditprofile = EditProfileFragment()
             fragmentTransaction.replace(R.id.nav_fragment, fragmenteditprofile)
+            fragmentTransaction.setReorderingAllowed(true)
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
 
