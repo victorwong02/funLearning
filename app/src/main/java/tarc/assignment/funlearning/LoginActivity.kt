@@ -46,6 +46,7 @@ class LoginActivity : AppCompatActivity() {
         //click, open register
         binding.noAccount.setOnClickListener{
             startActivity(Intent(this, RegisterActivity::class.java))
+            finish()
         }
 
         //click, start login
@@ -58,6 +59,7 @@ class LoginActivity : AppCompatActivity() {
         binding.forgetPassword.setOnClickListener {
             //
             startActivity(Intent(this, ForgetPasswordActivity::class.java))
+
         }
     }
 
