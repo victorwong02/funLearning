@@ -53,7 +53,7 @@ class RegisterActivity : AppCompatActivity() {
         password = binding.passwordEt.text.toString().trim()
         username = binding.usernameEt.text.toString().trim()
 
-        //validatation
+        //validation
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             //invalid email format
             binding.emailEt.error = "Invalid email format"

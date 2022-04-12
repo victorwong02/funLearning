@@ -2,7 +2,6 @@ package tarc.assignment.funlearning
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
 import android.util.Patterns
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
@@ -30,7 +29,7 @@ class ForgetPasswordActivity : AppCompatActivity() {
         //get data
         email = binding.emailEt.text.toString().trim()
 
-        //validatation
+        //validation
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             //invalid email format
             binding.emailEt.error = "Invalid email format"
