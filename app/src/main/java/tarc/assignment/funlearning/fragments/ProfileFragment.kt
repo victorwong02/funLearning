@@ -1,5 +1,6 @@
 package tarc.assignment.funlearning.fragments
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
@@ -46,12 +47,12 @@ class ProfileFragment : Fragment() {
     ): View {
 
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
-        val view = binding.root
+
         firebaseAuth = FirebaseAuth.getInstance()
 
 
         binding.logoutButton.setOnClickListener {
-            logoutDialog(it)
+            logoutDialog()
         }
 
         binding.editProfile.setOnClickListener {
@@ -63,6 +64,7 @@ class ProfileFragment : Fragment() {
             fragmentTransaction.commit()
         }
 
+        val view = binding.root
         return view
     }
 
@@ -71,7 +73,7 @@ class ProfileFragment : Fragment() {
         _binding = null
     }
 
-    private fun logoutDialog(view: View){
+    private fun logoutDialog() {
 
         val builder = AlertDialog.Builder(activity)
         builder.setTitle("Logout Confirmation")
@@ -151,6 +153,7 @@ class ProfileFragment : Fragment() {
 
             }
     }
+
 
     private fun loadavatar(){
         val firebaseUser = firebaseAuth.currentUser

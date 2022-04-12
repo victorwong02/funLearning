@@ -1,6 +1,7 @@
 package tarc.assignment.funlearning.fragments
 
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
