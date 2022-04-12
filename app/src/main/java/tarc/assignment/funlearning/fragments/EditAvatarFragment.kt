@@ -30,32 +30,31 @@ class EditAvatarFragment : Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
 
 
-        binding.selectBtn.setOnClickListener{
+        binding.selectBtn.setOnClickListener {
 
-            val avatar = if(binding.avatar1.isChecked){
+            val avatar = if (binding.avatar1.isChecked) {
                 "avatar1"
-            } else if (binding.avatar2.isChecked){
+            } else if (binding.avatar2.isChecked) {
                 "avatar2"
-            } else if(binding.avatar3.isChecked){
+            } else if (binding.avatar3.isChecked) {
                 "avatar3"
-            } else{
+            } else {
                 "profile_pic"
             }
 
             changeAvatar(avatar)
 
-            val fragmentManager =  parentFragmentManager
+            val fragmentManager = parentFragmentManager
             val fragmentTransaction = fragmentManager.beginTransaction()
-            val fragmenteditprofile = EditProfileFragment()
-            fragmentTransaction.replace(R.id.nav_fragment, fragmenteditprofile)
+            val fragmentEditProfile = EditProfileFragment()
+            fragmentTransaction.replace(R.id.nav_fragment, fragmentEditProfile)
             fragmentTransaction.setReorderingAllowed(true)
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
 
         }
 
-        val view = binding.root
-        return view
+        return binding.root
     }
 
     private fun changeAvatar(avatar: String) {

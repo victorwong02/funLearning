@@ -1,7 +1,6 @@
 package tarc.assignment.funlearning.fragments
 
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -46,35 +45,34 @@ class EditProfileFragment : Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
 
 
-        binding.profilePic.setOnClickListener{
-            val fragmentManager =  parentFragmentManager
+        binding.profilePic.setOnClickListener {
+            val fragmentManager = parentFragmentManager
             val fragmentTransaction = fragmentManager.beginTransaction()
-            val fragmenteditavatar = EditAvatarFragment()
-            fragmentTransaction.replace(R.id.nav_fragment, fragmenteditavatar)
+            val fragmentEditAvatar = EditAvatarFragment()
+            fragmentTransaction.replace(R.id.nav_fragment, fragmentEditAvatar)
             fragmentTransaction.setReorderingAllowed(true)
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
         }
 
-        binding.saveInfo.setOnClickListener{
+        binding.saveInfo.setOnClickListener {
             editProfile()
 
-            val fragmentManager =  parentFragmentManager
+            val fragmentManager = parentFragmentManager
             val fragmentTransaction = fragmentManager.beginTransaction()
-            val fragmentprofile = ProfileFragment()
-            fragmentTransaction.replace(R.id.nav_fragment, fragmentprofile)
+            val fragmentProfile = ProfileFragment()
+            fragmentTransaction.replace(R.id.nav_fragment, fragmentProfile)
             fragmentTransaction.setReorderingAllowed(true)
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
 
         }
 
-        binding.changePswd.setOnClickListener{
+        binding.changePswd.setOnClickListener {
             startActivity(Intent(context, ForgetPasswordActivity::class.java))
         }
 
-        val view = binding.root
-        return view
+        return binding.root
     }
 
 
@@ -106,9 +104,8 @@ class EditProfileFragment : Fragment() {
 
         db.collection("user").document(uid).get()
             .addOnSuccessListener { document ->
-                val picname = document.getString("profile_pic").toString()
 
-                when(picname){
+                when(document.getString("profile_pic").toString()){
                     "avatar1" -> binding.profilePic.setImageDrawable(resources.getDrawable(R.drawable.avatar1))
                     "avatar2" -> binding.profilePic.setImageDrawable(resources.getDrawable(R.drawable.avatar2))
                     "avatar3" -> binding.profilePic.setImageDrawable(resources.getDrawable(R.drawable.avatar3))

@@ -1,6 +1,5 @@
 package tarc.assignment.funlearning.fragments
 
-import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
@@ -29,14 +28,14 @@ class ProfileFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        loadavatar()
+        loadAvatar()
         loadInfo()
         loadHistory()
     }
 
     override fun onResume() {
         super.onResume()
-        loadavatar()
+        loadAvatar()
         loadInfo()
         loadHistory()
     }
@@ -56,18 +55,17 @@ class ProfileFragment : Fragment() {
         }
 
         binding.editProfile.setOnClickListener {
-            val fragmentManager =  parentFragmentManager
+            val fragmentManager = parentFragmentManager
             val fragmentTransaction = fragmentManager.beginTransaction()
-            val fragmenteditprofile = EditProfileFragment()
-            fragmentTransaction.replace(R.id.nav_fragment, fragmenteditprofile)
+            val fragmentEditProfile = EditProfileFragment()
+            fragmentTransaction.replace(R.id.nav_fragment, fragmentEditProfile)
             fragmentTransaction.setReorderingAllowed(true)
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
 
         }
 
-        val view = binding.root
-        return view
+        return binding.root
     }
 
     override fun onDestroyView() {
@@ -119,53 +117,52 @@ class ProfileFragment : Fragment() {
 
         db.collection("user").document(uid).get()
             .addOnSuccessListener { document ->
-                val cnotes = document.getString("c_notes").toString()
-                val cexercise  = document.getString("c_exercises").toString()
+                val cNotes = document.getString("c_notes").toString()
+                val cExercise  = document.getString("c_exercises").toString()
 
-                val htmlnotes = document.getString("html_notes").toString()
-                val htmlexercise  = document.getString("html_exercises").toString()
+                val htmlNotes = document.getString("html_notes").toString()
+                val htmlExercise  = document.getString("html_exercises").toString()
 
-                if(cnotes == "null"){
+                if(cNotes == "null"){
                     binding.cNotes.text = getString(R.string.c_lastnotes, notStarted)
                 }
                 else{
-                    binding.cNotes.text = getString(R.string.c_lastnotes, cnotes)
+                    binding.cNotes.text = getString(R.string.c_lastnotes, cNotes)
                 }
 
-                if(cexercise == "null"){
+                if(cExercise == "null"){
                     binding.cExercise.text = getString(R.string.c_lastexercise, notStarted)
                 }
                 else{
-                    binding.cExercise.text = getString(R.string.c_lastexercise, cexercise)
+                    binding.cExercise.text = getString(R.string.c_lastexercise, cExercise)
                 }
 
-                if(htmlnotes == "null"){
+                if(htmlNotes == "null"){
                     binding.htmlNotes.text = getString(R.string.html_lastnotes, notStarted)
                 }
                 else{
-                    binding.htmlNotes.text = getString(R.string.html_lastnotes, htmlnotes)
+                    binding.htmlNotes.text = getString(R.string.html_lastnotes, htmlNotes)
                 }
 
-                if(htmlexercise == "null"){
+                if(htmlExercise == "null"){
                     binding.htmlExercise.text  = getString(R.string.html_lastexercise, notStarted)
                 }
                 else{
-                    binding.htmlExercise.text  = getString(R.string.html_lastexercise, htmlexercise)
+                    binding.htmlExercise.text  = getString(R.string.html_lastexercise, htmlExercise)
                 }
 
             }
     }
 
 
-    private fun loadavatar(){
+    private fun loadAvatar(){
         val firebaseUser = firebaseAuth.currentUser
         val uid = firebaseUser!!.uid
 
         db.collection("user").document(uid).get()
             .addOnSuccessListener { document ->
-                val picname = document.getString("profile_pic").toString()
 
-                when(picname){
+                when(document.getString("profile_pic").toString()){
                     "avatar1" -> binding.profilepic.setImageDrawable(resources.getDrawable(R.drawable.avatar1))
                     "avatar2" -> binding.profilepic.setImageDrawable(resources.getDrawable(R.drawable.avatar2))
                     "avatar3" -> binding.profilepic.setImageDrawable(resources.getDrawable(R.drawable.avatar3))
