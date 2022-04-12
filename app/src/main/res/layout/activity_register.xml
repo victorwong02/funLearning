@@ -86,7 +86,7 @@
         android:layout_below="@id/passwordTil"
         android:layout_marginTop="10dp"
         android:textColor="@color/light_yellow"
-        android:backgroundTint="@color/green"/>
+        android:backgroundTint="@color/btn"/>
 
     <!-- Already have an account? go login-->
     <TextView
