@@ -1,34 +1,42 @@
 package tarc.assignment.funlearning
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Switch
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val bottomNavView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-
-        bottomNavView.setupWithNavController(findNavController(R.id.nav_fragment))
+        bottom_navigation.setupWithNavController(findNavController(R.id.nav_fragment))
 
         val settingsBtn = findViewById<View>(R.id.settings)
-        val darkModeLayout = findViewById<View>(R.id.dark_mode_layout)
 
         settingsBtn.setOnClickListener {
-
-            if (darkModeLayout.visibility == View.VISIBLE)
-                darkModeLayout.visibility = View.GONE
-            else
-                darkModeLayout.visibility = View.VISIBLE
+            if (dark_mode_layout.visibility == View.VISIBLE) dark_mode_layout.visibility = View.GONE
+            else dark_mode_layout.visibility = View.VISIBLE
         }
+
+        dark_mode_switch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
+
+
 
 //        //Home Fragment
 //        // Initialize data.
