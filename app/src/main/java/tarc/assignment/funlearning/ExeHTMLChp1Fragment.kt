@@ -6,9 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import tarc.assignment.funlearning.databinding.FragmentExerciseHtmlChp1Binding
 
 class ExeHTMLChp1Fragment : Fragment() {
+
+    private lateinit var firebaseAuth: FirebaseAuth
+    private val db = Firebase.firestore
 
     private var _binding: FragmentExerciseHtmlChp1Binding? = null
     private val binding get() = _binding!!
@@ -21,6 +27,12 @@ class ExeHTMLChp1Fragment : Fragment() {
         //inflate the layout for this fragment
         _binding = FragmentExerciseHtmlChp1Binding.inflate(inflater, container, false)
         val view = binding.root
+
+        firebaseAuth = FirebaseAuth.getInstance()
+        val firebaseUser = firebaseAuth.currentUser
+        val uid = firebaseUser!!.uid
+        val user = db.collection("user").document(uid)
+
         val showResult = view.findViewById<Button>(R.id.HTML_Chap1_Exe_ShowResult)
         showResult.setOnClickListener {
 
@@ -51,8 +63,23 @@ class ExeHTMLChp1Fragment : Fragment() {
 
                 val bundle = Bundle()
                 bundle.putString("num", numOfCorrectQues.toString())
-                var percentage = (numOfCorrectQues.toDouble()/5.0)*100.0
+                var percentage = ((numOfCorrectQues.toDouble()/5.0)*100.0).toInt()
                 bundle.putString("percent", percentage.toInt().toString())
+
+                //save data to database
+                user.get().addOnSuccessListener { document->
+                    val latestChap = document.getString("html_exercises")
+                    if(latestChap != null){
+                        val lastChar = latestChap.last()
+                        val lastInt = Integer.parseInt(lastChar.toString())
+
+                        if(lastInt < 1){
+                            user.update("html_exercises", "Chapter 1 ($percentage%)")
+                        }
+                    }else{
+                        user.update("html_exercises", "Chapter 1 ($percentage%)")
+                    }
+                }
 
                 //Switch Fragment to show result fragment
                 val fragmentManager =  parentFragmentManager

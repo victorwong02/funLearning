@@ -9,29 +9,36 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="10dp"
         android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp">
+        android:layout_marginEnd="5dp"
+        android:paddingTop="10dp">
 
         <TextView
             android:id="@+id/HTML_chap1_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/htmlChap1Title"
-            android:textStyle="bold"
-            android:textSize="20sp"
             android:layout_marginStart="5dp"
+            android:text="@string/htmlChap1Title"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <VideoView
-            android:id="@+id/intro_HTML_vid"
-            android:layout_width="380dp"
-            android:layout_height="250dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="20dp"
+        <FrameLayout
+            android:id="@+id/layout_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@+id/HTML_chap1_title"
-            app:layout_constraintTop_toBottomOf="@+id/HTML_chap1_title"/>
+            app:layout_constraintTop_toBottomOf="@+id/HTML_chap1_title">
+
+            <VideoView
+                android:id="@+id/intro_HTML_vid"
+                android:layout_width="380dp"
+                android:layout_height="250dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                 />
+        </FrameLayout>
 
         <TextView
             android:id="@+id/HTML_doc_des"
@@ -41,8 +48,8 @@
             android:layout_marginTop="20dp"
             android:text="@string/htmlDocSample"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/intro_HTML_vid"
-            app:layout_constraintTop_toBottomOf="@+id/intro_HTML_vid" />
+            app:layout_constraintStart_toStartOf="@+id/layout_video"
+            app:layout_constraintTop_toBottomOf="@+id/layout_video" />
 
         <ImageView
             android:id="@+id/HTML_doc_sample_pic"
@@ -50,9 +57,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:contentDescription="@string/htmlDocSamplePic"
+            android:src="@drawable/html_document_sample_"
             app:layout_constraintStart_toStartOf="@+id/HTML_doc_des"
-            app:layout_constraintTop_toBottomOf="@+id/HTML_doc_des"
-            android:src="@drawable/html_document_sample_" />
+            app:layout_constraintTop_toBottomOf="@+id/HTML_doc_des" />
 
         <TextView
             android:id="@+id/HTML_heading_title"
@@ -79,9 +86,9 @@
             android:layout_height="175dp"
             android:layout_marginTop="20dp"
             android:contentDescription="@string/htmlHeadingSamplePic"
+            android:src="@drawable/html_heading_sample"
             app:layout_constraintStart_toStartOf="@+id/HTML_heading_des"
-            app:layout_constraintTop_toBottomOf="@+id/HTML_heading_des"
-            android:src="@drawable/html_heading_sample" />
+            app:layout_constraintTop_toBottomOf="@+id/HTML_heading_des" />
 
         <TextView
             android:id="@+id/HTML_paragraph_title"
@@ -108,9 +115,9 @@
             android:layout_height="123dp"
             android:layout_marginTop="12dp"
             android:contentDescription="@string/htmlParagraphSamplePic"
+            android:src="@drawable/html_paragraph_sample"
             app:layout_constraintStart_toStartOf="@+id/HTML_paragraph_des"
-            app:layout_constraintTop_toBottomOf="@+id/HTML_paragraph_des"
-            android:src="@drawable/html_paragraph_sample" />
+            app:layout_constraintTop_toBottomOf="@+id/HTML_paragraph_des" />
 
         <TextView
             android:id="@+id/HTML_link_title"
@@ -137,9 +144,9 @@
             android:layout_height="123dp"
             android:layout_marginTop="12dp"
             android:contentDescription="@string/htmlLinkSamplePic"
+            android:src="@drawable/html_links_sample"
             app:layout_constraintStart_toStartOf="@+id/HTML_link_des"
-            app:layout_constraintTop_toBottomOf="@+id/HTML_link_des"
-            android:src="@drawable/html_links_sample" />
+            app:layout_constraintTop_toBottomOf="@+id/HTML_link_des" />
 
         <TextView
             android:id="@+id/HTML_image_title"
@@ -166,9 +173,9 @@
             android:layout_height="123dp"
             android:layout_marginTop="12dp"
             android:contentDescription="@string/htmlImageSamplePic"
+            android:src="@drawable/html_images_sample"
             app:layout_constraintStart_toStartOf="@+id/HTML_image_des"
-            app:layout_constraintTop_toBottomOf="@+id/HTML_image_des"
-            android:src="@drawable/html_images_sample" />
+            app:layout_constraintTop_toBottomOf="@+id/HTML_image_des" />
 
         <Button
             android:id="@+id/take_html_exe1_button"

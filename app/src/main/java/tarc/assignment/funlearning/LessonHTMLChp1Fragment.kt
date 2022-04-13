@@ -58,6 +58,6 @@ class LessonHTMLChp1Fragment : Fragment() {
         videoView.setMediaController(mediaController)
         videoView.setVideoURI(offlineUri)
         videoView.requestFocus()
-        videoView.start()
+
     }
 }

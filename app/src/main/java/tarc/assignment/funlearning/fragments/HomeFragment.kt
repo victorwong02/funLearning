@@ -109,19 +109,6 @@ class HomeFragment : Fragment() {
         }else {
             when (position) {
                 0 -> {
-                    user.get().addOnSuccessListener { document->
-                        val latestChap = document.getString("html_exercises")
-                        if(latestChap != null){
-                            val lastChar = latestChap.last()
-                            val lastInt = Integer.parseInt(lastChar.toString())
-
-                            if(lastInt < 1){
-                                user.update("html_exercises", "Exercise 1")
-                            }
-                        }else{
-                            user.update("html_exercises", "Exercise 1")
-                        }
-                    }
                     val exeHTMLChp1 = ExeHTMLChp1Fragment()
                     fragmentTransaction.replace(R.id.nav_fragment, exeHTMLChp1)
                     fragmentTransaction.setReorderingAllowed(true)
