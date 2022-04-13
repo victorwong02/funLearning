@@ -7,12 +7,10 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import tarc.assignment.funlearning.*
-import tarc.assignment.funlearning.data.Datasource
 
 class HTMLHomeFragment : Fragment() {
 
@@ -25,9 +23,8 @@ class HTMLHomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         //inflate the layout for this fragment
-        val v = inflater.inflate(R.layout.fragment_home, container, false)
 
-        return v
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     // To do the functionality in this fragment, etc. make a toast

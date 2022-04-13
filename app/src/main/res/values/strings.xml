@@ -118,7 +118,9 @@
     <string name="nav_home">Home</string>
     <string name="nav_profile">Profile</string>
     <string name="username">Username</string>
-
+    <string name="top_bar_title">HTML</string>
+    <string name="settings">Settings</string>
+    <string name="dark_mode">Dark Mode</string>
 
 
 </resources>

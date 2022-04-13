@@ -29,8 +29,6 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.hide()
-
         //init firebaseAuth
         firebaseAuth = FirebaseAuth.getInstance()
         // if user is logged in, direct go home

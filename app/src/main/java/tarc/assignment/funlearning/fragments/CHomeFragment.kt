@@ -12,7 +12,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import tarc.assignment.funlearning.*
-import tarc.assignment.funlearning.data.Datasource
 
 class CHomeFragment: Fragment() {
 
