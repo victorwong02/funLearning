@@ -29,9 +29,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         //inflate the layout for this fragment
-        val v = inflater.inflate(R.layout.fragment_home, container, false)
-
-        return v
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     // To do the functionality in this fragment, etc. make a toast
