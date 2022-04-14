@@ -5,11 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
-import tarc.assignment.funlearning.fragments.CHomeFragment
+import tarc.assignment.funlearning.fragments.HomeFragment
 import tarc.assignment.funlearning.fragments.OnItemClickListener
 import tarc.assignment.funlearning.model.ChpModel
 
-class CAdapter(private val context: CHomeFragment, private val dataset: List<ChpModel>, var clistener: OnItemClickListener): RecyclerView.Adapter<CAdapter.CViewHolder>() {
+class CAdapter(private val context: HomeFragment, private val dataset: List<ChpModel>, var clistener: OnItemClickListener): RecyclerView.Adapter<CAdapter.CViewHolder>() {
 
     class CViewHolder(private val view: View): RecyclerView.ViewHolder(view){
         val cChap: TextView = view.findViewById(R.id.lang_name)

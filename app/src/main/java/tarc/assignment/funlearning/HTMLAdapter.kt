@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
-import tarc.assignment.funlearning.fragments.HTMLHomeFragment
 import tarc.assignment.funlearning.fragments.HomeFragment
 import tarc.assignment.funlearning.fragments.OnItemClickListener
 import tarc.assignment.funlearning.model.ChpModel

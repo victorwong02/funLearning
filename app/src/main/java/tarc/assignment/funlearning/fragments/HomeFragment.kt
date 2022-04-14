@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
@@ -20,7 +21,6 @@ class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -38,22 +38,42 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Initialize data.
-        val myDataset = Datasource().loadHtml()
+        val languagePosition = 0
 
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
-        recyclerView.adapter = HTMLAdapter(this, myDataset, object:OnItemClickListener{
-            override fun onClick(position: Int, lessonOrExe: String) {
-                changeFragment(position, lessonOrExe)
-            }
-        })
+        if(languagePosition == 0){
+            //language position = 0 --> HTML
+            // Initialize data.
+            val myDataset = Datasource().loadHtml()
 
-        // Use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
-        recyclerView.setHasFixedSize(true)
+            val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
+            recyclerView.adapter = HTMLAdapter(this, myDataset, object:OnItemClickListener{
+                override fun onClick(position: Int, lessonOrExe: String) {
+                    changeFragment(languagePosition, position, lessonOrExe)
+                }
+            })
+
+            // Use this setting to improve performance if you know that changes
+            // in content do not change the layout size of the RecyclerView
+            recyclerView.setHasFixedSize(true)
+        }else {
+            // Initialize data.
+            val myDataset = Datasource().loadC()
+
+            val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
+            recyclerView.adapter = CAdapter(this, myDataset, object: OnItemClickListener {
+                override fun onClick(position: Int, lessonOrExe: String) {
+                    changeFragment(languagePosition, position, lessonOrExe)
+                }
+            })
+
+            // Use this setting to improve performance if you know that changes
+            // in content do not change the layout size of the RecyclerView
+            recyclerView.setHasFixedSize(true)
+        }
+
     }
 
-    fun changeFragment(position: Int, lessonOrExe: String){
+    fun changeFragment(languagePosition: Int, position: Int, lessonOrExe: String){
         firebaseAuth = FirebaseAuth.getInstance()
         val firebaseUser = firebaseAuth.currentUser
         val uid = firebaseUser!!.uid
@@ -62,61 +82,94 @@ class HomeFragment : Fragment() {
         val fragmentManager =  parentFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
 
-        if(lessonOrExe == "lesson"){
-            when (position) {
-                0 -> {
-                    user.get().addOnSuccessListener { document->
-                        val latestChap = document.getString("html_notes")
-                        if(latestChap != null){
-                            val lastChar = latestChap.last()
-                            val lastInt = Integer.parseInt(lastChar.toString())
+        if(languagePosition == 0){
+            //HTML
+            if(lessonOrExe == "lesson"){
+                when (position) {
+                    0 -> {
+                        user.get().addOnSuccessListener { document->
+                            val latestChap = document.getString("html_notes")
+                            if(latestChap != null){
+                                val lastChar = latestChap.last()
+                                val lastInt = Integer.parseInt(lastChar.toString())
 
-                            if(lastInt < 1){
+                                if(lastInt < 1){
+                                    user.update("html_notes", "Chapter 1")
+                                }
+                            }else{
                                 user.update("html_notes", "Chapter 1")
                             }
-                        }else{
-                            user.update("html_notes", "Chapter 1")
                         }
+                        val lessonHTMLChp1 = LessonHTMLChp1Fragment()
+                        fragmentTransaction.replace(R.id.nav_fragment, lessonHTMLChp1)
+                        fragmentTransaction.setReorderingAllowed(true)
+                        fragmentTransaction.commit()
                     }
-                    val lessonHTMLChp1 = LessonHTMLChp1Fragment()
-                    fragmentTransaction.replace(R.id.nav_fragment, lessonHTMLChp1)
-                    fragmentTransaction.setReorderingAllowed(true)
-                    fragmentTransaction.commit()
-                }
-                1 -> {
-                    user.get().addOnSuccessListener { document->
-                        val latestChap = document.getString("html_notes")
-                        if(latestChap != null){
-                            val lastChar = latestChap.last()
-                            val lastInt = Integer.parseInt(lastChar.toString())
+                    1 -> {
+                        user.get().addOnSuccessListener { document->
+                            val latestChap = document.getString("html_notes")
+                            if(latestChap != null){
+                                val lastChar = latestChap.last()
+                                val lastInt = Integer.parseInt(lastChar.toString())
 
-                            if(lastInt < 2){
+                                if(lastInt < 2){
+                                    user.update("html_notes", "Chapter 2")
+                                }
+                            }else{
                                 user.update("html_notes", "Chapter 2")
                             }
-                        }else{
-                            user.update("html_notes", "Chapter 2")
                         }
+                        val lessonHTMLChp2 = LessonHTMLChp2Fragment()
+                        fragmentTransaction.replace(R.id.nav_fragment, lessonHTMLChp2)
+                        fragmentTransaction.setReorderingAllowed(true)
+                        fragmentTransaction.commit()
                     }
-                    val lessonHTMLChp2 = LessonHTMLChp2Fragment()
-                    fragmentTransaction.replace(R.id.nav_fragment, lessonHTMLChp2)
-                    fragmentTransaction.setReorderingAllowed(true)
-                    fragmentTransaction.commit()
+                    else -> {
+                        Toast.makeText(context, "Coming Soon", Toast.LENGTH_SHORT).show()
+                    }
                 }
-                else -> {
-                    Toast.makeText(context, "Coming Soon", Toast.LENGTH_SHORT).show()
+            }else {
+                when (position) {
+                    0 -> {
+                        val exeHTMLChp1 = ExeHTMLChp1Fragment()
+                        fragmentTransaction.replace(R.id.nav_fragment, exeHTMLChp1)
+                        fragmentTransaction.setReorderingAllowed(true)
+                        fragmentTransaction.commit()
+                    }
+                    else -> {
+                        Toast.makeText(context, "Coming Soon", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
         }else {
-            when (position) {
-                0 -> {
-                    val exeHTMLChp1 = ExeHTMLChp1Fragment()
-                    fragmentTransaction.replace(R.id.nav_fragment, exeHTMLChp1)
-                    fragmentTransaction.setReorderingAllowed(true)
-                    fragmentTransaction.commit()
+            //C Language
+            if (lessonOrExe == "lesson") {
+                when (position) {
+                    0 -> {
+                        user.get().addOnSuccessListener { document ->
+                            val latestChap = document.getString("c_notes")
+                            if (latestChap != null) {
+                                val lastChar = latestChap.last()
+                                val lastInt = Integer.parseInt(lastChar.toString())
+
+                                if (lastInt < 1) {
+                                    user.update("c_notes", "Chapter 1")
+                                }
+                            } else {
+                                user.update("c_notes", "Chapter 1")
+                            }
+                        }
+                        val lessonCchp1 = LessonCLangChp1Fragment()
+                        fragmentTransaction.replace(R.id.nav_fragment, lessonCchp1)
+                        fragmentTransaction.setReorderingAllowed(true)
+                        fragmentTransaction.commit()
+                    }
+                    else -> {
+                        Toast.makeText(context, "Coming Soon", Toast.LENGTH_SHORT).show()
+                    }
                 }
-                else -> {
-                    Toast.makeText(context, "Coming Soon", Toast.LENGTH_SHORT).show()
-                }
+            } else {
+                Toast.makeText(context, "Coming Soon", Toast.LENGTH_SHORT).show()
             }
         }
     }
