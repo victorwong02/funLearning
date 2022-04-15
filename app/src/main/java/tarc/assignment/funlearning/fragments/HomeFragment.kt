@@ -27,18 +27,13 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        //inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
-    }
+    ): View = inflater.inflate(R.layout.fragment_home, container, false)
 
     // To do the functionality in this fragment, etc. make a toast
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val languagePosition = 0
-
-        if(languagePosition == 0){
+        if((activity as MainActivity).language == "HTML"){
             //language position = 0 --> HTML
             // Initialize data.
             val myDataset = Datasource().loadHtml()
@@ -46,7 +41,7 @@ class HomeFragment : Fragment() {
             val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
             recyclerView.adapter = HTMLAdapter(this, myDataset, object:OnItemClickListener{
                 override fun onClick(position: Int, lessonOrExe: String) {
-                    changeFragment(languagePosition, position, lessonOrExe)
+                    changeFragment(position, lessonOrExe)
                 }
             })
 
@@ -60,7 +55,7 @@ class HomeFragment : Fragment() {
             val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
             recyclerView.adapter = CAdapter(this, myDataset, object: OnItemClickListener {
                 override fun onClick(position: Int, lessonOrExe: String) {
-                    changeFragment(languagePosition, position, lessonOrExe)
+                    changeFragment(position, lessonOrExe)
                 }
             })
 
@@ -71,16 +66,16 @@ class HomeFragment : Fragment() {
 
     }
 
-    fun changeFragment(languagePosition: Int, position: Int, lessonOrExe: String){
+    fun changeFragment(position: Int, lessonOrExe: String){
         firebaseAuth = FirebaseAuth.getInstance()
         val firebaseUser = firebaseAuth.currentUser
         val uid = firebaseUser!!.uid
         val user = db.collection("user").document(uid)
 
-        val fragmentManager =  parentFragmentManager
+        val fragmentManager = parentFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
 
-        if(languagePosition == 0){
+        if((activity as MainActivity).language == "HTML"){
             //HTML
             if(lessonOrExe == "lesson"){
                 when (position) {

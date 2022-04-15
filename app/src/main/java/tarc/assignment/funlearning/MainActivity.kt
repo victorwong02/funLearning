@@ -10,31 +10,23 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.appbar.MaterialToolbar
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
+    lateinit var toolbar : MaterialToolbar
+    var language: String = "HTML"
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        toolbar = findViewById(R.id.topAppBar)
+
         bottom_navigation.setupWithNavController(findNavController(R.id.nav_fragment))
 
-        val settingsBtn = findViewById<View>(R.id.settings)
-
-        settingsBtn.setOnClickListener {
-            if (dark_mode_layout.visibility == View.VISIBLE) dark_mode_layout.visibility = View.GONE
-            else dark_mode_layout.visibility = View.VISIBLE
-        }
-
-        dark_mode_switch.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            } else {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            }
-        }
 
 
 
@@ -50,6 +42,12 @@ class MainActivity : AppCompatActivity() {
 //        recyclerView.setHasFixedSize(true)
 
     }
+
+    fun changeTopBarTitle(name: String) {
+        toolbar?.title = name
+        language = name
+    }
+
 
 
 }
