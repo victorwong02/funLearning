@@ -76,7 +76,6 @@
         android:contentDescription="@string/forgot_password"
         android:padding="5dp"
         android:text="@string/forgot_password"
-        android:textColor="@color/black"
         android:textDirection="rtl" />
 
     <!--Login Button-->
