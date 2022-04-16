@@ -64,14 +64,15 @@ class ExeHTMLChp1Fragment : Fragment() {
                 val bundle = Bundle()
                 bundle.putString("num", numOfCorrectQues.toString())
                 var percentage = ((numOfCorrectQues.toDouble()/5.0)*100.0).toInt()
-                bundle.putString("percent", percentage.toInt().toString())
+                bundle.putString("percent", percentage.toString())
 
                 //save data to database
                 user.get().addOnSuccessListener { document->
                     val latestChap = document.getString("html_exercises")
                     if(latestChap != null){
                         val lastChar = latestChap.last()
-                        val lastInt = Integer.parseInt(lastChar.toString())
+                        val lastInt = lastChar.code
+
 
                         if(lastInt < 1){
                             user.update("html_exercises", "Chapter 1 ($percentage%)")
